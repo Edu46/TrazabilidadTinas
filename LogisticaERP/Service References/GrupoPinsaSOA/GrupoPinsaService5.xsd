@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.UtileriasContratos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.UtileriasContratos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="eTablasBusqueda">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GPO_AGENTES_ADUANALES" />
+      <xs:enumeration value="GPO_CIUDADES" />
+      <xs:enumeration value="GPO_EMPLEADOS" />
+      <xs:enumeration value="GPO_EMPRESAS" />
+      <xs:enumeration value="GPO_ESTADOS" />
+      <xs:enumeration value="GPO_MUNICIPIOS" />
+      <xs:enumeration value="GPO_PAISES" />
+      <xs:enumeration value="GPO_METODOS_PAGO" />
+      <xs:enumeration value="GPO_FECHA_INICIO_DIAS_CREDITOS" />
+      <xs:enumeration value="GPO_TASA_IMPUESTOS" />
+      <xs:enumeration value="GPO_GRUPOS_RETENCIONES" />
+      <xs:enumeration value="GPO_TASAS_IMPUESTOS_RETENCIONES" />
+      <xs:enumeration value="GPO_NOTIFICACIONES_PAGOS" />
+      <xs:enumeration value="GPO_DOCUMENTOS" />
+      <xs:enumeration value="GPO_TIPOS_DOCUMENTOS_CONSULTAR_SP" />
+      <xs:enumeration value="GPO_CIUDADES_CONSULTAR_SP" />
+      <xs:enumeration value="GPO_EMPRESAS_CONSULTAR_SP" />
+      <xs:enumeration value="GPO_PRIORIDADES_TITULOS_CUENTAS" />
+      <xs:enumeration value="GPO_TITULOS_CUENTAS" />
+      <xs:enumeration value="GPO_EVENTOS_CONTABLES" />
+      <xs:enumeration value="GPO_NOMBRES_PRIORIDADES" />
+      <xs:enumeration value="GPO_MAPEOS_BD" />
+      <xs:enumeration value="GPO_MAPEOS_COLUMNAS" />
+      <xs:enumeration value="GPO_MAPEOS_TABLAS" />
+      <xs:enumeration value="GPO_CONSULTA_AVANZADA" />
+      <xs:enumeration value="GPO_GASTOS_ASOCIADOS" />
+      <xs:enumeration value="GPO_CODIGOS_POSTALES" />
+      <xs:enumeration value="GPO_COMBINACION_CONTABLE" />
+      <xs:enumeration value="GPO_ADUANAS" />
+      <xs:enumeration value="GPO_SEGMENTO_COMBINACION_CONTABLE_FILTRAR_SUBSEGMENTO" />
+      <xs:enumeration value="GPO_FORTIA_DEPARTAMENTOS" />
+      <xs:enumeration value="GPO_TIPOS_DOCUMENTOS_TIPOS_EROGACIONES" />
+      <xs:enumeration value="GPO_SEGMENTOS_CUENTAS_CONTABLES_CONSULTAR_SP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eTablasBusqueda" nillable="true" type="tns:eTablasBusqueda" />
+</xs:schema>

@@ -1,0 +1,26 @@
+Fecha y Hora: 18/12/2020 04:26:18 p. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: ObtenerViaje
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeCrear.ObtenerViaje(String idBarco) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.cs:línea 512
+
+Fecha y Hora: 18/12/2020 04:26:20 p. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeCrear.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.cs:línea 220
+

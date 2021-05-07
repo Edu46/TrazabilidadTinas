@@ -1,0 +1,12 @@
+Fecha y Hora: 17/12/2020 10:09:51 a. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerViajes
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerViajes(String fechaInicio, String fechaFin, String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 41
+
+Fecha y Hora: 17/12/2020 10:09:59 a. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 146
+

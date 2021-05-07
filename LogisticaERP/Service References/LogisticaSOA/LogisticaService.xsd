@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="LogisticaWCFAPP.EntidadesContratos.IIB" elementFormDefault="qualified" targetNamespace="LogisticaWCFAPP.EntidadesContratos.IIB" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd2" namespace="LogisticaWCFAPP.EntidadesContratos" />
+  <xs:complexType name="ArrayOfASN">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ASN" nillable="true" type="tns:ASN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfASN" nillable="true" type="tns:ArrayOfASN" />
+  <xs:complexType name="ASN">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="LogisticaWCFAPP.EntidadesContratos" base="q1:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ASNDetalles" nillable="true" type="tns:ArrayOfASNDetalle" />
+          <xs:element minOccurs="0" name="Almacen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstadoDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaASN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaAduana" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaEntrega" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaFactura" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HoraEntrega" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdASN" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IdEstadoDocumento" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InvoiceIdCloudCXP" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NoASN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoEnvioPICO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoFactura" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoPedimento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreAduana" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreProveedor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroRecepcionCloud" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PedidoCompra" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RFCProveedor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubAlmacen" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ASN" nillable="true" type="tns:ASN" />
+  <xs:complexType name="ArrayOfASNDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ASNDetalle" nillable="true" type="tns:ASNDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfASNDetalle" nillable="true" type="tns:ArrayOfASNDetalle" />
+  <xs:complexType name="ASNDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="LogisticaWCFAPP.EntidadesContratos" base="q2:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ASNDetallesDistribuciones" nillable="true" type="tns:ArrayOfASNDetalleDistribucion" />
+          <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CantidadEnMano" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CodProducto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EAN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaCaducidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaEntrega" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaLote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdASN" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IdASNDetalle" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IdControlProveedor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineNumCloud" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="LineaOCCloud" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Lote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MensajeLoteo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoASN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoLinea" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NoPallet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoProducto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrecioUnitario" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ProcesadoLoteo" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReceiptNumCloud" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceLineId" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="UDMProveedor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ASNDetalle" nillable="true" type="tns:ASNDetalle" />
+  <xs:complexType name="ArrayOfASNDetalleDistribucion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ASNDetalleDistribucion" nillable="true" type="tns:ASNDetalleDistribucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfASNDetalleDistribucion" nillable="true" type="tns:ArrayOfASNDetalleDistribucion" />
+  <xs:complexType name="ASNDetalleDistribucion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="LogisticaWCFAPP.EntidadesContratos" base="q3:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CloudDeliveryID" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CloudPickSlipID" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CloudPickSlipLine" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CloudPickedQuantity" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CloudSubinventoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodProducto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlagProcesado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IdASN" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IdASNDetalle" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IdASNDetalleDistribucion" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Lote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoASN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoPallet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoProducto" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ASNDetalleDistribucion" nillable="true" type="tns:ASNDetalleDistribucion" />
+</xs:schema>

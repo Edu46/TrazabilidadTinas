@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/Imports">
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd0" namespace="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd3" namespace="UtileriasServiciosWCF.ContratosDatosDLL" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd2" namespace="SeguridadERPWCPApp.EntidadesContratos" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd4" namespace="SeguridadERPWCPApp.UtileriasContratos" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.UtileriasContratos" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" />
+      <xsd:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISeguridadModulosERPService_EnumTipoModulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnumTipoModulo" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_EnumTipoModulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnumTipoModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_EnumTipoModulo_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q1="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q1:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_BusquedaAvanzada_InputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaAvanzada" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_BusquedaAvanzada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaAvanzadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_BusquedaAvanzada_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q2="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q2:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_CambiarContrasenia_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContrasenia" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_CambiarContrasenia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContraseniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_CambiarContrasenia_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q3="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q3:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerUsuarioSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioSesion" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerUsuarioSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerUsuarioSesion_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q4="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q4:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerUsuarios_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q5="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q5:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_SolicitarRecuperacionContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarRecuperacionContrasena" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_SolicitarRecuperacionContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarRecuperacionContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_SolicitarRecuperacionContrasena_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q6="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q6:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_RecuperarContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_RecuperarContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_RecuperarContrasena_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q7="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q7:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerGruposNegocioActivosERPJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerGruposNegocioActivosERPJson" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerGruposNegocioActivosERPJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerGruposNegocioActivosERPJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadModulosERPService_ObtenerGruposNegocioActivosERPJson_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q8="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q8:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:portType name="ISeguridadModulosERPService">
+    <wsdl:operation name="EnumTipoModulo">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/EnumTipoModulo" message="tns:ISeguridadModulosERPService_EnumTipoModulo_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/EnumTipoModuloResponse" message="tns:ISeguridadModulosERPService_EnumTipoModulo_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/EnumTipoModuloExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_EnumTipoModulo_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaAvanzada">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/BusquedaAvanzada" message="tns:ISeguridadModulosERPService_BusquedaAvanzada_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/BusquedaAvanzadaResponse" message="tns:ISeguridadModulosERPService_BusquedaAvanzada_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/BusquedaAvanzadaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_BusquedaAvanzada_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasenia">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/CambiarContrasenia" message="tns:ISeguridadModulosERPService_CambiarContrasenia_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/CambiarContraseniaResponse" message="tns:ISeguridadModulosERPService_CambiarContrasenia_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/CambiarContraseniaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_CambiarContrasenia_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioSesion">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuarioSesion" message="tns:ISeguridadModulosERPService_ObtenerUsuarioSesion_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuarioSesionResponse" message="tns:ISeguridadModulosERPService_ObtenerUsuarioSesion_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuarioSesionExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_ObtenerUsuarioSesion_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarios">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuarios" message="tns:ISeguridadModulosERPService_ObtenerUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuariosResponse" message="tns:ISeguridadModulosERPService_ObtenerUsuarios_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuariosExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_ObtenerUsuarios_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRecuperacionContrasena">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/SolicitarRecuperacionContrasena" message="tns:ISeguridadModulosERPService_SolicitarRecuperacionContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/SolicitarRecuperacionContrasenaResponse" message="tns:ISeguridadModulosERPService_SolicitarRecuperacionContrasena_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/SolicitarRecuperacionContrasenaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_SolicitarRecuperacionContrasena_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarContrasena">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/RecuperarContrasena" message="tns:ISeguridadModulosERPService_RecuperarContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/RecuperarContrasenaResponse" message="tns:ISeguridadModulosERPService_RecuperarContrasena_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/RecuperarContrasenaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_RecuperarContrasena_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerGruposNegocioActivosERPJson">
+      <wsdl:input wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerGruposNegocioActivosERPJson" message="tns:ISeguridadModulosERPService_ObtenerGruposNegocioActivosERPJson_InputMessage" />
+      <wsdl:output wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerGruposNegocioActivosERPJsonResponse" message="tns:ISeguridadModulosERPService_ObtenerGruposNegocioActivosERPJson_OutputMessage" />
+      <wsdl:fault wsaw:Action="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerGruposNegocioActivosERPJsonExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:ISeguridadModulosERPService_ObtenerGruposNegocioActivosERPJson_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,60 @@
+Fecha y Hora: 08/01/2021 12:22:08 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 155
+
+Fecha y Hora: 08/01/2021 12:22:13 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerViajes
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerViajes(String fechaInicio, String fechaFin, String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 50
+
+Fecha y Hora: 08/01/2021 12:22:39 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerViajes
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerViajes(String fechaInicio, String fechaFin, String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 50
+
+Fecha y Hora: 08/01/2021 12:22:41 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 155
+
+Fecha y Hora: 08/01/2021 12:23:49 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerViajes
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerViajes(String fechaInicio, String fechaFin, String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 50
+
+Fecha y Hora: 08/01/2021 12:23:56 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 155
+
+Fecha y Hora: 08/01/2021 12:26:08 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerViajes
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerViajes(String fechaInicio, String fechaFin, String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 50
+
+Fecha y Hora: 08/01/2021 12:26:14 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 155
+
+Fecha y Hora: 08/01/2021 12:28:39 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerViajes
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerViajes(String fechaInicio, String fechaFin, String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 50
+
+Fecha y Hora: 08/01/2021 12:28:49 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 155
+

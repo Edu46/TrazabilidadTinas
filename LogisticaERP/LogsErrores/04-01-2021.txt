@@ -1,0 +1,30 @@
+Fecha y Hora: 04/01/2021 04:32:46 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerViajes
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeEditar.ObtenerViajes(String fechaInicio, String fechaFin, String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs:línea 50
+
+Fecha y Hora: 04/01/2021 04:36:32 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: CargarDDLBarco
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.CargarDDLBarco() en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 76
+
+Fecha y Hora: 04/01/2021 04:37:38 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: CargarDDLBarco
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.CargarDDLBarco() en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 76
+
+Fecha y Hora: 04/01/2021 04:39:13 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: CargarDDLBarco
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.CargarDDLBarco() en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 76
+
+Fecha y Hora: 04/01/2021 04:42:43 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: CargarDDLBarco
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.CargarDDLBarco() en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 76
+

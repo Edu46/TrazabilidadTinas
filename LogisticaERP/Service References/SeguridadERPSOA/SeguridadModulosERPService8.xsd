@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="SeguridadERPWCPApp.UtileriasContratos" elementFormDefault="qualified" targetNamespace="SeguridadERPWCPApp.UtileriasContratos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.UtileriasContratos" />
+  <xs:complexType name="BusquedaAvanzada">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CamposConsulta" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Filtro" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FiltroPersonalizado" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.UtileriasContratos" minOccurs="0" name="TablaBusqueda" type="q3:eTablasBusqueda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusquedaAvanzada" nillable="true" type="tns:BusquedaAvanzada" />
+  <xs:complexType name="ResultadoBusquedaAvanzada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Respuesta" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.UtileriasContratos" minOccurs="0" name="TablaBusqueda" type="q4:eTablasBusqueda" />
+      <xs:element minOccurs="0" name="TipoEntidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultadoBusquedaAvanzada" nillable="true" type="tns:ResultadoBusquedaAvanzada" />
+</xs:schema>

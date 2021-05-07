@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd2" namespace="LogisticaWCFAPP.EntidadesContratos" />
+  <xs:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd4" namespace="OperacionFlotaWCFAPP.EntidadesContratos" />
+  <xs:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd5" namespace="LogisticaWCFAPP.EntidadesContratos.IIB" />
+  <xs:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd6" namespace="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" />
+  <xs:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="ObtenerMonitorLocalizador">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMonitorLocalizadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerMonitorLocalizadorResult" nillable="true" type="q1:ArrayOfMonitorLocalizador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCodigoTransporte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_codigo_transporte" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codigo_transporte" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCodigoTransporteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCodigoTransporteResult" nillable="true" type="q2:ArrayOfCodigoTransporte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCodigoTransporte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="codigo" nillable="true" type="q3:CodigoTransporte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCodigoTransporteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarCodigoTransporteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTarifa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tarifa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_estado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_municipio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_ciudad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_tipo_tarifa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_codigo_transporte" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Nombre_proveedor_ebs12" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nombre_almacen_ebs12" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_almacen_eb12" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_proveedor_ebs12" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="backhaul" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTarifaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTarifaResult" nillable="true" type="q4:ArrayOfTarifa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTarifa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="tarifa" nillable="true" type="q5:Tarifa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTarifaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTarifaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarListaTarifas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="listaTarifas" nillable="true" type="q6:ArrayOfTarifa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarListaTarifasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarListaTarifasResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalculoTarifa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Num_viaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pedido_venta" type="xs:boolean" />
+        <xs:element minOccurs="0" name="transferencia" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalculoTarifaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCalculoTarifaResult" nillable="true" type="q7:ArrayOfCalculoTarifa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCalculoTarifa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="caltarifa" nillable="true" type="q8:CalculoTarifa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCalculoTarifaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarCalculoTarifaResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalculoTarifaRepresentante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:decimal" />
+        <xs:element minOccurs="0" name="numViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="esConsultaLigera" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalculoTarifaRepresentanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCalculoTarifaRepresentanteResult" nillable="true" type="q9:CalculoTarifaRepresentante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCalculoTarifaRepresentante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="calculoTarifaRepresentante" nillable="true" type="q10:CalculoTarifaRepresentante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCalculoTarifaRepresentanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarCalculoTarifaRepresentanteResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCalculoTarifaRepresentanteOC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCalculoTarifaRepresentante" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idOrdenCompra" type="xs:decimal" />
+        <xs:element minOccurs="0" name="folioOrdenCompra" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCalculoTarifaRepresentanteOCResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTarifaConfiguracion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tarifa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="IdEmpresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="CentroCosto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTarifaConfiguracionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTarifaConfiguracionResult" nillable="true" type="q11:ArrayOfTarifaConfiguracion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTarifaRepresentante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tarifa_representante" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_almacen_origen_ebs12" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_estado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_municipio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTarifaRepresentanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTarifaRepresentanteResult" nillable="true" type="q12:ArrayOfTarifaRepresentante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTarifaRepresentante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="tarifa" nillable="true" type="q13:TarifaRepresentante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTarifaRepresentanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTarifaRepresentanteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarListaTarifasRepresentantes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="listaTarifas" nillable="true" type="q14:ArrayOfTarifaRepresentante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarListaTarifasRepresentantesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="GuardarListaTarifasRepresentantesResult" nillable="true" type="q15:ArrayOfTarifaRepresentante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarInformacionNavition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_Fecha_Inicio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Fecha_Fin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Almacen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Mes_Uno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Mes_Dos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Mes_Tres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="i_Dias_Inv_Autorizado" type="xs:int" />
+        <xs:element minOccurs="0" name="s_Producto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Anio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Id_Empresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_DiasInventarioAutorizado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="b_EsEBS12" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarInformacionNavitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ConsultarInformacionNavitionResult" nillable="true" type="q16:ArrayOfCPlaneacion_Reabastecimiento_Almacen_Navi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMovimientosPlaneacionLigero">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="d_Id_Plneacion_Reabastecimientos" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="d_Folio" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMovimientosPlaneacionLigeroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ConsultarMovimientosPlaneacionLigeroResult" nillable="true" type="q17:ArrayOfC_Planeacion_Reabastecimiento_Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMovimientosPlaneacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="d_Id_Plneacion_Reabastecimientos" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="d_Folio" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarMovimientosPlaneacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ConsultarMovimientosPlaneacionResult" nillable="true" type="q18:ArrayOfC_Planeacion_Reabastecimiento_Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCatalogoLeadTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_Codigo_Almacen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Descripcion_Almacen" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCatalogoLeadTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ConsultarCatalogoLeadTimeResult" nillable="true" type="q19:ArrayOfC_Catalogo_Lead_Time" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrabarMovimientosPlanesReabastecimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="st_PlanesReabastecimiento" nillable="true" type="q20:C_Planeacion_Reabastecimiento_Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrabarMovimientosPlanesReabastecimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="OperacionFlotaWCFAPP.EntidadesContratos" minOccurs="0" name="GrabarMovimientosPlanesReabastecimientoResult" nillable="true" type="q21:CRespuestaGeneral" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEstatusPlanReabastecimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="d_Id_Planeacion_Reabastecimiento" type="xs:decimal" />
+        <xs:element minOccurs="0" name="d_Id_Estatus_Planeacion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEstatusPlanReabastecimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="OperacionFlotaWCFAPP.EntidadesContratos" minOccurs="0" name="ActualizarEstatusPlanReabastecimientoResult" nillable="true" type="q22:CRespuestaGeneral" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerASNs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerASNsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="LogisticaWCFAPP.EntidadesContratos.IIB" minOccurs="0" name="ObtenerASNsResult" nillable="true" type="q23:ArrayOfASN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerASNMaestroDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idASN" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="noASN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noEnvio" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerASNMaestroDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="LogisticaWCFAPP.EntidadesContratos.IIB" minOccurs="0" name="ObtenerASNMaestroDetalleResult" nillable="true" type="q24:ArrayOfASN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarASNEstadoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="noASN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idEstadoDocumento" type="xs:decimal" />
+        <xs:element minOccurs="0" name="noEnvio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarASNEstadoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s_Factura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="s_Serie" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAMResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarASNDetalleDistribucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="noASN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noEnvio" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="LogisticaWCFAPP.EntidadesContratos.IIB" minOccurs="0" name="asnDetallesDistribuciones" nillable="true" type="q25:ArrayOfASNDetalleDistribucion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarASNDetalleDistribucionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarriers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="carrierID" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarriersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" minOccurs="0" name="GetCarriersResult" nillable="true" type="q26:ArrayOfCarrier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizationsUnitsForTripFee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="businessUnitID" type="xs:long" />
+        <xs:element minOccurs="0" name="calculationType" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizationsUnitsForTripFeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" minOccurs="0" name="GetOrganizationsUnitsForTripFeeResult" nillable="true" type="q27:ArrayOfOrganizationUnitForTravelFee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesOrdersDeliveries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="businessUnitID" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesOrdersDeliveriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" minOccurs="0" name="GetSalesOrdersDeliveriesResult" nillable="true" type="q28:ArrayOfSaleOrderDelivery" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesOrdersTripsFor2Months">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="organizationID" type="xs:long" />
+        <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="trips" nillable="true" type="q29:ArrayOflong" />
+        <xs:element minOccurs="0" name="limit2Months" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesOrdersTripsFor2MonthsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" minOccurs="0" name="GetSalesOrdersTripsFor2MonthsResult" nillable="true" type="q30:ArrayOfSaleOrderTrip" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerOrdenServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Viaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FECHA_INI_V" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FECHA_FIN_V" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerOrdenServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerOrdenServicioResult" nillable="true" type="q31:ArrayOfOrdenServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idViaje" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tipoViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noViaje" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="folioViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoAlmacenOracle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="esConsultaLigera" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerViajeResult" nillable="true" type="q32:ArrayOfViaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesPorRangoFecha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaDesde" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaHasta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="almacenSubalmacen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdAlmacenOracle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesPorRangoFechaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerViajesPorRangoFechaResult" nillable="true" type="q33:ArrayOfViaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarViaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="viaje" nillable="true" type="q34:Viaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarViajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarViajeResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarViaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idViaje" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarViajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarViajeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesActivosPorRangoFecha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaDesde" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaHasta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="almacenSubalmacen" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesActivosPorRangoFechaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerViajesActivosPorRangoFechaResult" nillable="true" type="q35:ArrayOfViaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajeBusqueda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idViaje" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tipoViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folioViaje" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoAlmacenOracle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAlmacen" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idProveedor" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajeBusquedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerViajeBusquedaResult" nillable="true" type="q36:ArrayOfViaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEntregaViaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idsEntregas" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEntregaViajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEntregaViajeResult" nillable="true" type="q37:ArrayOfViaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesRPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="viaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesRPTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerViajesRPTResult" nillable="true" type="q38:ArrayOfViajeRPT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesRPTENTREGA_EBS12">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="viaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesRPTENTREGA_EBS12Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerViajesRPTENTREGA_EBS12Result" nillable="true" type="q39:ArrayOfViajeRPT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesActivoRPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="viaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerViajesActivoRPTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="LogisticaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerViajesActivoRPTResult" nillable="true" type="q40:ArrayOfViajeActivoRPT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

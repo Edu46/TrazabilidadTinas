@@ -1,0 +1,28 @@
+Fecha y Hora: 26/10/2020 05:09:27 p. m.
+Excepción
+Tipo: Newtonsoft.Json.JsonReaderExceptionMensaje: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+Origen: CrearAlerta
+Rastreo de pila:    en Newtonsoft.Json.JsonTextReader.ParseValue()
+   en Newtonsoft.Json.JsonTextReader.Read()
+   en Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   en LogisticaERP.Catalogos.TrazabilidadTinas.ConfigurarAlerta.CrearAlerta(CatalogoAlerta catalogoAlerta) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\ConfigurarAlerta.aspx.cs:línea 113
+
+Fecha y Hora: 26/10/2020 05:13:20 p. m.
+Excepción
+Tipo: Newtonsoft.Json.JsonReaderExceptionMensaje: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+Origen: CrearAlerta
+Rastreo de pila:    en Newtonsoft.Json.JsonTextReader.ParseValue()
+   en Newtonsoft.Json.JsonTextReader.Read()
+   en Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   en LogisticaERP.Catalogos.TrazabilidadTinas.ConfigurarAlerta.CrearAlerta(CatalogoAlerta catalogoAlerta) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\ConfigurarAlerta.aspx.cs:línea 113
+

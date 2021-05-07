@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd2" namespace="SeguridadERPWCPApp.EntidadesContratos" />
+  <xs:complexType name="ArrayOfJerarquiaDeUsuarioFuncionalidadControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JerarquiaDeUsuarioFuncionalidadControl" nillable="true" type="tns:JerarquiaDeUsuarioFuncionalidadControl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJerarquiaDeUsuarioFuncionalidadControl" nillable="true" type="tns:ArrayOfJerarquiaDeUsuarioFuncionalidadControl" />
+  <xs:complexType name="JerarquiaDeUsuarioFuncionalidadControl">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="JerarquiaDe{0}" Namespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UsuarioFuncionalidadControl" Namespace="SeguridadERPWCPApp.EntidadesContratos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChildNodes" nillable="true" type="tns:ArrayOfJerarquiaDeUsuarioFuncionalidadControl" />
+      <xs:element minOccurs="0" name="Depth" type="xs:int" />
+      <xs:element xmlns:q1="SeguridadERPWCPApp.EntidadesContratos" minOccurs="0" name="Entity" nillable="true" type="q1:UsuarioFuncionalidadControl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JerarquiaDeUsuarioFuncionalidadControl" nillable="true" type="tns:JerarquiaDeUsuarioFuncionalidadControl" />
+  <xs:complexType name="ArrayOfJerarquiaDeUsuarioModuloFuncionalidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JerarquiaDeUsuarioModuloFuncionalidad" nillable="true" type="tns:JerarquiaDeUsuarioModuloFuncionalidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJerarquiaDeUsuarioModuloFuncionalidad" nillable="true" type="tns:ArrayOfJerarquiaDeUsuarioModuloFuncionalidad" />
+  <xs:complexType name="JerarquiaDeUsuarioModuloFuncionalidad">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="JerarquiaDe{0}" Namespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UsuarioModuloFuncionalidad" Namespace="SeguridadERPWCPApp.EntidadesContratos" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChildNodes" nillable="true" type="tns:ArrayOfJerarquiaDeUsuarioModuloFuncionalidad" />
+      <xs:element minOccurs="0" name="Depth" type="xs:int" />
+      <xs:element xmlns:q2="SeguridadERPWCPApp.EntidadesContratos" minOccurs="0" name="Entity" nillable="true" type="q2:UsuarioModuloFuncionalidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JerarquiaDeUsuarioModuloFuncionalidad" nillable="true" type="tns:JerarquiaDeUsuarioModuloFuncionalidad" />
+</xs:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.UtileriasContratos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.UtileriasContratos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="eTablasBusqueda">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SERP_MODULOS" />
+      <xs:enumeration value="SERP_FUNCIONALIDADES" />
+      <xs:enumeration value="SERP_USUARIOS" />
+      <xs:enumeration value="SERP_ROLES" />
+      <xs:enumeration value="SERP_PERFILES" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eTablasBusqueda" nillable="true" type="tns:eTablasBusqueda" />
+</xs:schema>

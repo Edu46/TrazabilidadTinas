@@ -1,0 +1,49 @@
+Fecha y Hora: 13/01/2021 12:31:43 p. m.
+Error en el elemento: IBM Integration Bus
+Origen: ActualizarTransaccionProveedor
+Mensaje: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>404 Not Found</title>
+</head>
+<body>
+<h1>404 Not Found</h1>
+<p>
+BIP6311E: REST API '&apos;API_TRAZABILIDAD_TINAS&apos;' does not support method '&apos;PUT&apos;' for URL '&apos;http://10.50.1.15:7080/api_trazabilidad_tinas/v1/transaccion/estatus-utilizado&apos;'. 
+</p>
+<hr>
+<i>
+IBM Integration Bus v10.0.0.12
+</i>
+</body>
+</html>
+
+
+Fecha y Hora: 13/01/2021 02:23:35 p. m.
+Excepción
+Tipo: Newtonsoft.Json.JsonReaderExceptionMensaje: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+Origen: ActualizarTiempo
+Rastreo de pila:    en Newtonsoft.Json.JsonTextReader.ParseValue()
+   en Newtonsoft.Json.JsonTextReader.Read()
+   en Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   en LogisticaERP.Catalogos.TrazabilidadTinas.ActualizarTaraMontacarga.ActualizarTiempo(TaraMontacargaDetalle taraMontacargaDetalle) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\ActualizarTaraMontacarga.aspx.cs:línea 199
+
+Fecha y Hora: 13/01/2021 02:26:52 p. m.
+Excepción
+Tipo: Newtonsoft.Json.JsonReaderExceptionMensaje: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+Origen: ActualizarTiempo
+Rastreo de pila:    en Newtonsoft.Json.JsonTextReader.ParseValue()
+   en Newtonsoft.Json.JsonTextReader.Read()
+   en Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   en LogisticaERP.Catalogos.TrazabilidadTinas.ActualizarTaraMontacarga.ActualizarTiempo(TaraMontacargaDetalle taraMontacargaDetalle) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\ActualizarTaraMontacarga.aspx.cs:línea 199
+

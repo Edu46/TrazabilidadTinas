@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LogisticaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd3" namespace="UtileriasServiciosWCF.ContratosDatosDLL" />
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd2" namespace="LogisticaWCFAPP.EntidadesContratos" />
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd4" namespace="OperacionFlotaWCFAPP.EntidadesContratos" />
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd5" namespace="LogisticaWCFAPP.EntidadesContratos.IIB" />
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd6" namespace="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" />
+      <xsd:import schemaLocation="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerMonitorLocalizador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMonitorLocalizador" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerMonitorLocalizador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMonitorLocalizadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerMonitorLocalizador_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q1="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q1:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCodigoTransporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodigoTransporte" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCodigoTransporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodigoTransporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCodigoTransporte_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q2="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q2:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCodigoTransporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCodigoTransporte" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCodigoTransporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCodigoTransporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCodigoTransporte_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q3="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q3:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarifa" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarifaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifa_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q4="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q4:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarTarifa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarTarifa" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarTarifa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarTarifaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarTarifa_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q5="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q5:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarListaTarifas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarListaTarifas" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarListaTarifas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarListaTarifasResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarListaTarifas_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q6="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q6:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCalculoTarifa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalculoTarifa" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCalculoTarifa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalculoTarifaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCalculoTarifa_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q7="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q7:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCalculoTarifa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCalculoTarifa" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCalculoTarifa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCalculoTarifaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCalculoTarifa_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q8="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q8:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCalculoTarifaRepresentante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalculoTarifaRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCalculoTarifaRepresentante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalculoTarifaRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerCalculoTarifaRepresentante_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q9="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q9:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCalculoTarifaRepresentante_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCalculoTarifaRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCalculoTarifaRepresentante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCalculoTarifaRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarCalculoTarifaRepresentante_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q10="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q10:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarCalculoTarifaRepresentanteOC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCalculoTarifaRepresentanteOC" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarCalculoTarifaRepresentanteOC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCalculoTarifaRepresentanteOCResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarCalculoTarifaRepresentanteOC_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q11="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q11:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifaConfiguracion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarifaConfiguracion" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifaConfiguracion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarifaConfiguracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifaConfiguracion_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q12="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q12:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifaRepresentante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarifaRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifaRepresentante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarifaRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerTarifaRepresentante_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q13="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q13:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarTarifaRepresentante_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarTarifaRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarTarifaRepresentante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarTarifaRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarTarifaRepresentante_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q14="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q14:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarListaTarifasRepresentantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarListaTarifasRepresentantes" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarListaTarifasRepresentantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarListaTarifasRepresentantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarListaTarifasRepresentantes_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q15="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q15:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarInformacionNavition_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarInformacionNavition" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarInformacionNavition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarInformacionNavitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarInformacionNavition_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q16="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q16:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacionLigero_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMovimientosPlaneacionLigero" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacionLigero_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMovimientosPlaneacionLigeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacionLigero_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q17="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q17:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMovimientosPlaneacion" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarMovimientosPlaneacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacion_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q18="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q18:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarCatalogoLeadTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCatalogoLeadTime" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarCatalogoLeadTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCatalogoLeadTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ConsultarCatalogoLeadTime_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q19="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q19:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GrabarMovimientosPlanesReabastecimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GrabarMovimientosPlanesReabastecimiento" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GrabarMovimientosPlanesReabastecimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GrabarMovimientosPlanesReabastecimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GrabarMovimientosPlanesReabastecimiento_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q20="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q20:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarEstatusPlanReabastecimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEstatusPlanReabastecimiento" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarEstatusPlanReabastecimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEstatusPlanReabastecimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarEstatusPlanReabastecimiento_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q21="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q21:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerASNs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerASNs" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerASNs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerASNsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerASNs_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q22="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q22:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerASNMaestroDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerASNMaestroDetalle" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerASNMaestroDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerASNMaestroDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerASNMaestroDetalle_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q23="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q23:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarASNEstadoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarASNEstadoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarASNEstadoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarASNEstadoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ActualizarASNEstadoDocumento_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q24="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q24:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAMResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q25="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q25:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarASNDetalleDistribucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarASNDetalleDistribucion" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarASNDetalleDistribucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarASNDetalleDistribucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarASNDetalleDistribucion_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q26="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q26:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetCarriers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarriers" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetCarriers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarriersResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetCarriers_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q27="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q27:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetOrganizationsUnitsForTripFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationsUnitsForTripFee" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetOrganizationsUnitsForTripFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationsUnitsForTripFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetOrganizationsUnitsForTripFee_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q28="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q28:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetSalesOrdersDeliveries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrdersDeliveries" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetSalesOrdersDeliveries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrdersDeliveriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetSalesOrdersDeliveries_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q29="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q29:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetSalesOrdersTripsFor2Months_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrdersTripsFor2Months" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetSalesOrdersTripsFor2Months_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesOrdersTripsFor2MonthsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GetSalesOrdersTripsFor2Months_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q30="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q30:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerOrdenServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerOrdenServicio" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerOrdenServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerOrdenServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerOrdenServicio_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q31="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q31:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViaje" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViaje_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q32="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q32:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesPorRangoFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesPorRangoFecha" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesPorRangoFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesPorRangoFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesPorRangoFecha_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q33="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q33:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarViaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarViaje" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarViaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarViajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_GuardarViaje_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q34="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q34:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_EliminarViaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarViaje" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_EliminarViaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarViajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_EliminarViaje_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q35="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q35:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesActivosPorRangoFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesActivosPorRangoFecha" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesActivosPorRangoFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesActivosPorRangoFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesActivosPorRangoFecha_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q36="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q36:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajeBusqueda_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajeBusqueda" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajeBusqueda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajeBusquedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajeBusqueda_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q37="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q37:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerEntregaViaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEntregaViaje" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerEntregaViaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEntregaViajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerEntregaViaje_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q38="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q38:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesRPT_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesRPT" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesRPT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesRPTResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesRPT_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q39="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q39:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesRPTENTREGA_EBS12_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesRPTENTREGA_EBS12" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesRPTENTREGA_EBS12_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesRPTENTREGA_EBS12Response" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesRPTENTREGA_EBS12_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q40="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q40:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesActivoRPT_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesActivoRPT" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesActivoRPT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerViajesActivoRPTResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogisticaWCFAPP.Servicios_ObtenerViajesActivoRPT_ExcepcionesServicioFault_FaultMessage">
+    <wsdl:part xmlns:q41="UtileriasServiciosWCF.ContratosDatosDLL" name="detail" element="q41:ExcepcionesServicioDLL" />
+  </wsdl:message>
+  <wsdl:portType name="LogisticaWCFAPP.Servicios">
+    <wsdl:operation name="ObtenerMonitorLocalizador">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerMonitorLocalizador" message="tns:LogisticaWCFAPP.Servicios_ObtenerMonitorLocalizador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerMonitorLocalizadorResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerMonitorLocalizador_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerMonitorLocalizadorExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerMonitorLocalizador_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodigoTransporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCodigoTransporte" message="tns:LogisticaWCFAPP.Servicios_ObtenerCodigoTransporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCodigoTransporteResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerCodigoTransporte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCodigoTransporteExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerCodigoTransporte_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCodigoTransporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCodigoTransporte" message="tns:LogisticaWCFAPP.Servicios_GuardarCodigoTransporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCodigoTransporteResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarCodigoTransporte_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCodigoTransporteExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarCodigoTransporte_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarifa">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifa" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifa_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifa_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarTarifa">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifa" message="tns:LogisticaWCFAPP.Servicios_GuardarTarifa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifaResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarTarifa_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarTarifa_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarListaTarifas">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifas" message="tns:LogisticaWCFAPP.Servicios_GuardarListaTarifas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifasResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarListaTarifas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifasExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarListaTarifas_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalculoTarifa">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifa" message="tns:LogisticaWCFAPP.Servicios_ObtenerCalculoTarifa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifaResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerCalculoTarifa_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerCalculoTarifa_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCalculoTarifa">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifa" message="tns:LogisticaWCFAPP.Servicios_GuardarCalculoTarifa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifaResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarCalculoTarifa_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarCalculoTarifa_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalculoTarifaRepresentante">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifaRepresentante" message="tns:LogisticaWCFAPP.Servicios_ObtenerCalculoTarifaRepresentante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifaRepresentanteResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerCalculoTarifaRepresentante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifaRepresentanteExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerCalculoTarifaRepresentante_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCalculoTarifaRepresentante">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifaRepresentante" message="tns:LogisticaWCFAPP.Servicios_GuardarCalculoTarifaRepresentante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifaRepresentanteResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarCalculoTarifaRepresentante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifaRepresentanteExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarCalculoTarifaRepresentante_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCalculoTarifaRepresentanteOC">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarCalculoTarifaRepresentanteOC" message="tns:LogisticaWCFAPP.Servicios_ActualizarCalculoTarifaRepresentanteOC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarCalculoTarifaRepresentanteOCResponse" message="tns:LogisticaWCFAPP.Servicios_ActualizarCalculoTarifaRepresentanteOC_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarCalculoTarifaRepresentanteOCExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ActualizarCalculoTarifaRepresentanteOC_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarifaConfiguracion">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaConfiguracion" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifaConfiguracion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaConfiguracionResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifaConfiguracion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaConfiguracionExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifaConfiguracion_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarifaRepresentante">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaRepresentante" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifaRepresentante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaRepresentanteResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifaRepresentante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaRepresentanteExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerTarifaRepresentante_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarTarifaRepresentante">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifaRepresentante" message="tns:LogisticaWCFAPP.Servicios_GuardarTarifaRepresentante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifaRepresentanteResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarTarifaRepresentante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifaRepresentanteExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarTarifaRepresentante_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarListaTarifasRepresentantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifasRepresentantes" message="tns:LogisticaWCFAPP.Servicios_GuardarListaTarifasRepresentantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifasRepresentantesResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarListaTarifasRepresentantes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifasRepresentantesExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarListaTarifasRepresentantes_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarInformacionNavition">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarInformacionNavition" message="tns:LogisticaWCFAPP.Servicios_ConsultarInformacionNavition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarInformacionNavitionResponse" message="tns:LogisticaWCFAPP.Servicios_ConsultarInformacionNavition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarInformacionNavitionExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ConsultarInformacionNavition_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMovimientosPlaneacionLigero">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacionLigero" message="tns:LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacionLigero_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacionLigeroResponse" message="tns:LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacionLigero_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacionLigeroExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacionLigero_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMovimientosPlaneacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacion" message="tns:LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacionResponse" message="tns:LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacionExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ConsultarMovimientosPlaneacion_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoLeadTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarCatalogoLeadTime" message="tns:LogisticaWCFAPP.Servicios_ConsultarCatalogoLeadTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarCatalogoLeadTimeResponse" message="tns:LogisticaWCFAPP.Servicios_ConsultarCatalogoLeadTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarCatalogoLeadTimeExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ConsultarCatalogoLeadTime_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabarMovimientosPlanesReabastecimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GrabarMovimientosPlanesReabastecimiento" message="tns:LogisticaWCFAPP.Servicios_GrabarMovimientosPlanesReabastecimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GrabarMovimientosPlanesReabastecimientoResponse" message="tns:LogisticaWCFAPP.Servicios_GrabarMovimientosPlanesReabastecimiento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GrabarMovimientosPlanesReabastecimientoExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GrabarMovimientosPlanesReabastecimiento_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstatusPlanReabastecimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarEstatusPlanReabastecimiento" message="tns:LogisticaWCFAPP.Servicios_ActualizarEstatusPlanReabastecimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarEstatusPlanReabastecimientoResponse" message="tns:LogisticaWCFAPP.Servicios_ActualizarEstatusPlanReabastecimiento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarEstatusPlanReabastecimientoExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ActualizarEstatusPlanReabastecimiento_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerASNs">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNs" message="tns:LogisticaWCFAPP.Servicios_ObtenerASNs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNsResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerASNs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNsExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerASNs_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerASNMaestroDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNMaestroDetalle" message="tns:LogisticaWCFAPP.Servicios_ObtenerASNMaestroDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNMaestroDetalleResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerASNMaestroDetalle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNMaestroDetalleExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerASNMaestroDetalle_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarASNEstadoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarASNEstadoDocumento" message="tns:LogisticaWCFAPP.Servicios_ActualizarASNEstadoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarASNEstadoDocumentoResponse" message="tns:LogisticaWCFAPP.Servicios_ActualizarASNEstadoDocumento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarASNEstadoDocumentoExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ActualizarASNEstadoDocumento_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM" message="tns:LogisticaWCFAPP.Servicios_EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAMResponse" message="tns:LogisticaWCFAPP.Servicios_EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAMExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarASNDetalleDistribucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarASNDetalleDistribucion" message="tns:LogisticaWCFAPP.Servicios_GuardarASNDetalleDistribucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarASNDetalleDistribucionResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarASNDetalleDistribucion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarASNDetalleDistribucionExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarASNDetalleDistribucion_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarriers">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetCarriers" message="tns:LogisticaWCFAPP.Servicios_GetCarriers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetCarriersResponse" message="tns:LogisticaWCFAPP.Servicios_GetCarriers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetCarriersExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GetCarriers_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationsUnitsForTripFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetOrganizationsUnitsForTripFee" message="tns:LogisticaWCFAPP.Servicios_GetOrganizationsUnitsForTripFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetOrganizationsUnitsForTripFeeResponse" message="tns:LogisticaWCFAPP.Servicios_GetOrganizationsUnitsForTripFee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetOrganizationsUnitsForTripFeeExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GetOrganizationsUnitsForTripFee_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrdersDeliveries">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersDeliveries" message="tns:LogisticaWCFAPP.Servicios_GetSalesOrdersDeliveries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersDeliveriesResponse" message="tns:LogisticaWCFAPP.Servicios_GetSalesOrdersDeliveries_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersDeliveriesExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GetSalesOrdersDeliveries_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrdersTripsFor2Months">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersTripsFor2Months" message="tns:LogisticaWCFAPP.Servicios_GetSalesOrdersTripsFor2Months_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersTripsFor2MonthsResponse" message="tns:LogisticaWCFAPP.Servicios_GetSalesOrdersTripsFor2Months_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersTripsFor2MonthsExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GetSalesOrdersTripsFor2Months_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerOrdenServicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerOrdenServicio" message="tns:LogisticaWCFAPP.Servicios_ObtenerOrdenServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerOrdenServicioResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerOrdenServicio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerOrdenServicioExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerOrdenServicio_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViaje" message="tns:LogisticaWCFAPP.Servicios_ObtenerViaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajeResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerViaje_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajeExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerViaje_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesPorRangoFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesPorRangoFecha" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesPorRangoFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesPorRangoFechaResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesPorRangoFecha_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesPorRangoFechaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesPorRangoFecha_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarViaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarViaje" message="tns:LogisticaWCFAPP.Servicios_GuardarViaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarViajeResponse" message="tns:LogisticaWCFAPP.Servicios_GuardarViaje_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarViajeExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_GuardarViaje_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarViaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/EliminarViaje" message="tns:LogisticaWCFAPP.Servicios_EliminarViaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/EliminarViajeResponse" message="tns:LogisticaWCFAPP.Servicios_EliminarViaje_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/EliminarViajeExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_EliminarViaje_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesActivosPorRangoFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivosPorRangoFecha" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesActivosPorRangoFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivosPorRangoFechaResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesActivosPorRangoFecha_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivosPorRangoFechaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesActivosPorRangoFecha_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajeBusqueda">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajeBusqueda" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajeBusqueda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajeBusquedaResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajeBusqueda_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajeBusquedaExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajeBusqueda_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEntregaViaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerEntregaViaje" message="tns:LogisticaWCFAPP.Servicios_ObtenerEntregaViaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerEntregaViajeResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerEntregaViaje_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerEntregaViajeExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerEntregaViaje_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesRPT">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPT" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesRPT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPTResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesRPT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPTExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesRPT_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesRPTENTREGA_EBS12">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPTENTREGA_EBS12" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesRPTENTREGA_EBS12_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPTENTREGA_EBS12Response" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesRPTENTREGA_EBS12_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPTENTREGA_EBS12ExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesRPTENTREGA_EBS12_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesActivoRPT">
+      <wsdl:input wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivoRPT" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesActivoRPT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivoRPTResponse" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesActivoRPT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivoRPTExcepcionesServicioFault" name="ExcepcionesServicioFault" message="tns:LogisticaWCFAPP.Servicios_ObtenerViajesActivoRPT_ExcepcionesServicioFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="enPointSOAPLogisticaService" type="tns:LogisticaWCFAPP.Servicios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerMonitorLocalizador">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerMonitorLocalizador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodigoTransporte">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCodigoTransporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCodigoTransporte">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCodigoTransporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarifa">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarTarifa">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarListaTarifas">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalculoTarifa">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCalculoTarifa">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalculoTarifaRepresentante">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerCalculoTarifaRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCalculoTarifaRepresentante">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarCalculoTarifaRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCalculoTarifaRepresentanteOC">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarCalculoTarifaRepresentanteOC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarifaConfiguracion">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaConfiguracion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarifaRepresentante">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerTarifaRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarTarifaRepresentante">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarTarifaRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarListaTarifasRepresentantes">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarListaTarifasRepresentantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarInformacionNavition">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarInformacionNavition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMovimientosPlaneacionLigero">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacionLigero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarMovimientosPlaneacion">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarMovimientosPlaneacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCatalogoLeadTime">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ConsultarCatalogoLeadTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GrabarMovimientosPlanesReabastecimiento">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GrabarMovimientosPlanesReabastecimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstatusPlanReabastecimiento">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarEstatusPlanReabastecimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerASNs">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerASNMaestroDetalle">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerASNMaestroDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarASNEstadoDocumento">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ActualizarASNEstadoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/EjecutarConcurrente_GPIN_EJECUTAR_ASN_DINAM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarASNDetalleDistribucion">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarASNDetalleDistribucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarriers">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GetCarriers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationsUnitsForTripFee">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GetOrganizationsUnitsForTripFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrdersDeliveries">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersDeliveries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrdersTripsFor2Months">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GetSalesOrdersTripsFor2Months" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerOrdenServicio">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerOrdenServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViaje">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesPorRangoFecha">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesPorRangoFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarViaje">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/GuardarViaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarViaje">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/EliminarViaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesActivosPorRangoFecha">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivosPorRangoFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajeBusqueda">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajeBusqueda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEntregaViaje">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerEntregaViaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesRPT">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesRPTENTREGA_EBS12">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesRPTENTREGA_EBS12" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerViajesActivoRPT">
+      <soap:operation soapAction="http://tempuri.org/LogisticaWCFAPP.Servicios/ObtenerViajesActivoRPT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LogisticaService">
+    <wsdl:port name="enPointSOAPLogisticaService" binding="tns:enPointSOAPLogisticaService">
+      <soap:address location="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

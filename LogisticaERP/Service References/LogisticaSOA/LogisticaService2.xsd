@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" elementFormDefault="qualified" targetNamespace="LogisticaWCFAPP.EntidadesContratos.OracleEBS12" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCarrier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Carrier" nillable="true" type="tns:Carrier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarrier" nillable="true" type="tns:ArrayOfCarrier" />
+  <xs:complexType name="Carrier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllowContinuousMove" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AllowIntersperseLoad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute11" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute12" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute13" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute14" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute15" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attribute9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttributeCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CMFirstLoadDiscount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CMFreeDHMileage" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CMRateVariant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarrierID" type="xs:long" />
+      <xs:element minOccurs="0" name="CarrierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIMDimensionUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIMDimensionalFactor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIMMinPackVol" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="DIMVolumeUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DIMWeightUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DimensionUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistanceCalculationMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistanceUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EffectiveEndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FreightAuditLineLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightBillAutoApproval" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenericFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdateBy" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LastUpdateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastUpdateLogin" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ManifestingEnabledFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxCMDHDistance" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxCMDHTime" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxCMDistance" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxCMTime" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxDrivingTimeIn24HR" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxDutyTimeIn24HR" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxLayoverTime" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxNumStopsPermitted" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxOutOfRoute" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxSizeHeight" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxSizeLength" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxSizeWidth" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxTotalDistance" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxTotalDistanceIn24HR" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MaxTotalTime" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MinCMDistance" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MinCMTime" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MinLayoverTime" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MinSizeHeight" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MinSizeLength" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MinSizeWidth" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="OriginDstnSurchargeLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartyUsgAssigmentID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ScacCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SupplierSiteID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TimeUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitRateBasis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VolumeUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WeightUOM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Carrier" nillable="true" type="tns:Carrier" />
+  <xs:complexType name="ArrayOfOrganizationUnitForTravelFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrganizationUnitForTravelFee" nillable="true" type="tns:OrganizationUnitForTravelFee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrganizationUnitForTravelFee" nillable="true" type="tns:ArrayOfOrganizationUnitForTravelFee" />
+  <xs:complexType name="OrganizationUnitForTravelFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoAlmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDAlmacen" type="xs:long" />
+      <xs:element minOccurs="0" name="NombreAlmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoAlmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoCalculoTarifa" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrganizationUnitForTravelFee" nillable="true" type="tns:OrganizationUnitForTravelFee" />
+  <xs:complexType name="ArrayOfSaleOrderDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaleOrderDelivery" nillable="true" type="tns:SaleOrderDelivery" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSaleOrderDelivery" nillable="true" type="tns:ArrayOfSaleOrderDelivery" />
+  <xs:complexType name="SaleOrderDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeliveryID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FromSubinventoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderQuantityUOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderedItem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderedItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderedQuantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesOrderID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ShipFromOrgID" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaleOrderDelivery" nillable="true" type="tns:SaleOrderDelivery" />
+  <xs:complexType name="ArrayOfSaleOrderTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SaleOrderTrip" nillable="true" type="tns:SaleOrderTrip" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSaleOrderTrip" nillable="true" type="tns:ArrayOfSaleOrderTrip" />
+  <xs:complexType name="SaleOrderTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cajas" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoAlmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoSubalmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FactorConversion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FechaProgramada" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IDAlmacen" type="xs:long" />
+      <xs:element minOccurs="0" name="IDEntrega" type="xs:long" />
+      <xs:element minOccurs="0" name="IDViaje" type="xs:long" />
+      <xs:element minOccurs="0" name="NumPedidoVenta" type="xs:long" />
+      <xs:element minOccurs="0" name="NumSucursal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCajas" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalCajasEstandar" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Transportista" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaleOrderTrip" nillable="true" type="tns:SaleOrderTrip" />
+</xs:schema>

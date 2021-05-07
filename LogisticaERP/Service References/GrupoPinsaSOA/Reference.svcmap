@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="24bcd98d-9539-47b9-881a-4c1748435d9f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GrupoPinsaService.xsd" MetadataType="Schema" ID="9d4d4a3a-37b4-4409-bfa3-23da16f81558" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GrupoPinsaService1.xsd" MetadataType="Schema" ID="04a5f2b1-6cba-4dfc-8ba5-6381d40a1616" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GrupoPinsaService.wsdl" MetadataType="Wsdl" ID="e7e5d000-5a61-4814-85d3-e563a62d0660" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?wsdl" />
+    <MetadataFile FileName="GrupoPinsaService2.xsd" MetadataType="Schema" ID="b85c8303-4442-421a-9853-dbd4ca0ec2b2" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GrupoPinsaService3.xsd" MetadataType="Schema" ID="733b5c19-1d90-4ccb-a68e-834b8a11b3ac" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd5" />
+    <MetadataFile FileName="GrupoPinsaService4.xsd" MetadataType="Schema" ID="210bf0e2-3486-4889-9910-b8fc1c77e6ce" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd4" />
+    <MetadataFile FileName="GrupoPinsaService5.xsd" MetadataType="Schema" ID="e41fbe52-32bc-4e38-9320-4a4705d38bb0" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd7" />
+    <MetadataFile FileName="GrupoPinsaService6.xsd" MetadataType="Schema" ID="e24cf97f-f857-4c95-adde-4200db7fd212" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd6" />
+    <MetadataFile FileName="GrupoPinsaService7.xsd" MetadataType="Schema" ID="4d3d5415-2fef-4c88-8785-e7b3a85be6ce" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd9" />
+    <MetadataFile FileName="GrupoPinsaService8.xsd" MetadataType="Schema" ID="ca138785-db6b-4b01-86c1-ac56aa5cd424" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd8" />
+    <MetadataFile FileName="GrupoPinsaService9.xsd" MetadataType="Schema" ID="43e8813f-b497-4ee6-89cd-117c083e1a40" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="GrupoPinsaService.disco" MetadataType="Disco" ID="917ebea1-d347-43f6-94ca-cbf552ebd0e5" SourceId="1" SourceUrl="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

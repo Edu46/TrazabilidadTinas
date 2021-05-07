@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2972b2a-6c1a-4782-bf90-49b78f205762" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LogisticaService.xsd" MetadataType="Schema" ID="258f3612-a99a-4fdc-8815-f3d4e6b414ba" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd5" />
+    <MetadataFile FileName="LogisticaService1.xsd" MetadataType="Schema" ID="f26c61e2-3826-4fd9-98e2-7a5fa7cac451" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LogisticaService.wsdl" MetadataType="Wsdl" ID="979e0aa8-c054-4e76-bbb7-320ff104c3f9" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?wsdl" />
+    <MetadataFile FileName="LogisticaService2.xsd" MetadataType="Schema" ID="3710c336-d38e-4086-87b1-2224dd3f64fd" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd6" />
+    <MetadataFile FileName="LogisticaService.disco" MetadataType="Disco" ID="f11e688c-9f4f-4a5b-92b3-92e55edf42fa" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?disco" />
+    <MetadataFile FileName="LogisticaService3.xsd" MetadataType="Schema" ID="0a7d5d8e-e872-49fa-b612-ebf664e652d6" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd4" />
+    <MetadataFile FileName="LogisticaService4.xsd" MetadataType="Schema" ID="c584d230-4deb-4ed9-92aa-1e07c1df3a88" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LogisticaService5.xsd" MetadataType="Schema" ID="fb24b232-37eb-473d-b320-c0456fa9d94a" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LogisticaService6.xsd" MetadataType="Schema" ID="03413527-175d-4dea-b8c3-691783113cde" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LogisticaService7.xsd" MetadataType="Schema" ID="905f1d4a-3033-4da8-83e6-d7aee2a2c3b3" SourceId="1" SourceUrl="http://winvmd01:82/Logistica/Servicios/LogisticaService.svc?xsd=xsd7" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

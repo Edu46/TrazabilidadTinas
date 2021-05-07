@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService" elementFormDefault="qualified" targetNamespace="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd2" namespace="SeguridadERPWCPApp.EntidadesContratos" />
+  <xs:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd4" namespace="SeguridadERPWCPApp.UtileriasContratos" />
+  <xs:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="EnumTipoModulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="SeguridadERPWCPApp.EntidadesContratos" minOccurs="0" name="enumeraciones" type="q1:eTipoModulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnumTipoModuloResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaAvanzada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="SeguridadERPWCPApp.UtileriasContratos" minOccurs="0" name="busqueda" nillable="true" type="q2:BusquedaAvanzada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaAvanzadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="SeguridadERPWCPApp.UtileriasContratos" minOccurs="0" name="BusquedaAvanzadaResult" nillable="true" type="q3:ResultadoBusquedaAvanzada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContrasenia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="claveUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contraseniaAnterior" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contraseniaNueva" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContraseniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarContraseniaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarioSesion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clave_usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_modulo" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_tipo_modulo" nillable="true" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarioSesionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="SeguridadERPWCPApp.EntidadesContratos" minOccurs="0" name="ObtenerUsuarioSesionResult" nillable="true" type="q4:UsuarioSesion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_usuario" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreCompleto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_empleado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_rol" nillable="true" type="xs:decimal" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="id_empresas" nillable="true" type="q5:ArrayOfNullableOfdecimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="SeguridadERPWCPApp.EntidadesContratos" minOccurs="0" name="ObtenerUsuariosResult" nillable="true" type="q6:ArrayOfUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarRecuperacionContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="identificadorUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarRecuperacionContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarRecuperacionContrasenaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="solicitudRecuperacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrasenaNueva" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecuperarContrasenaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerGruposNegocioActivosERPJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio_erp" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerGruposNegocioActivosERPJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerGruposNegocioActivosERPJsonResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

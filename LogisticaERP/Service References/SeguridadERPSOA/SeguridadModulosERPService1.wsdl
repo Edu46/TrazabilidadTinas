@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SeguridadModulosERPService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService" location="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="endPointSOAPSeguridadModulosERPService" type="i0:ISeguridadModulosERPService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnumTipoModulo">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/EnumTipoModulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaAvanzada">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/BusquedaAvanzada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasenia">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/CambiarContrasenia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioSesion">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuarioSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarios">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarRecuperacionContrasena">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/SolicitarRecuperacionContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarContrasena">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/RecuperarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerGruposNegocioActivosERPJson">
+      <soap:operation soapAction="SeguridadERPWCPApp.Servicios.SeguridadModulosERPService/ISeguridadModulosERPService/ObtenerGruposNegocioActivosERPJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionesServicioFault">
+        <soap:fault use="literal" name="ExcepcionesServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SeguridadModulosERPService">
+    <wsdl:port name="endPointSOAPSeguridadModulosERPService" binding="tns:endPointSOAPSeguridadModulosERPService">
+      <soap:address location="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79E33C0A-436E-4753-9184-4CD79AE98A1C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogisticaERP</RootNamespace>
+    <AssemblyName>LogisticaERP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ExtensionesServiciosWCF">
+      <HintPath>C:\LibreriasPINSA\WCF\ExtensionesServiciosWCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="ModuloSesionCompartidaSubdominios">
+      <HintPath>C:\LibreriasPINSA\WEB\ModuloSesionCompartidaSubdominios.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccesoRestringido.aspx" />
+    <Content Include="Catalogos\BusquedaAvanzadaPersonalizada\BusquedaAvanzadaFolioPlaneacionReabastecimiento.aspx" />
+    <Content Include="Catalogos\BusquedaViajes.aspx" />
+    <Content Include="Catalogos\CalculoTarifasPorteadores.aspx" />
+    <Content Include="Catalogos\CalculoTarifasRepresentantes.aspx" />
+    <Content Include="Catalogos\CancelacionMasiva\CancelacionMasiva.aspx" />
+    <Content Include="Catalogos\CancelacionMasiva\Popup\BusquedaCodigosMotivos.aspx" />
+    <Content Include="Catalogos\OracleCloud\popup\ObtenerFacturaPinsa.aspx" />
+    <Content Include="Catalogos\OracleCloud\RecepcionarASN.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\ActualizarTaraMontacarga.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\AntecamaraBasculaFrigorifico.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\AsignarUbicacionFinalTina.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\BarcoViaje.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\BarcoViajeConsultar.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\Bascula.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\BasculaMuelle.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\Calidad.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\Certificacion.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\ConfigurarAlerta.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\DesviacionCalidad.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\NivelMuestreo.aspx" />
+    <Content Include="Catalogos\TrazabilidadTinas\Zona.aspx" />
+    <Content Include="Catalogos\MonitorLocalizadores.aspx" />
+    <Content Include="Catalogos\CalculoTarifas.aspx" />
+    <Content Include="Catalogos\Tarifas.aspx" />
+    <Content Include="Catalogos\TarifasRepresentantes.aspx" />
+    <Content Include="Catalogos\PlaneacionReabastecimientoAlmacen.aspx" />
+    <Content Include="Catalogos\Viajes.aspx" />
+    <Content Include="Controles\BusquedaGenerica\Busqueda.aspx" />
+    <Content Include="ExtensionesServiciosWCF.dll" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Global.asax" />
+    <Content Include="MainPage.Master" />
+    <Content Include="Blank.Master" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService.disco" />
+    <None Include="Service References\GrupoPinsaSOA\configuration91.svcinfo" />
+    <None Include="Service References\GrupoPinsaSOA\configuration.svcinfo" />
+    <None Include="Service References\GrupoPinsaSOA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.ASN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.CalculoTarifa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.CalculoTarifaRepresentante.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.Carrier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.CodigoTransporte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.CPlaneacion_Reabastecimiento_Almacen_Navi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.CRespuestaGeneral.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.C_Catalogo_Lead_Time.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.C_Planeacion_Reabastecimiento_Almacen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.MonitorLocalizador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.OrganizationUnitForTravelFee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.SaleOrderDelivery.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.SaleOrderTrip.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.Tarifa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.TarifaConfiguracion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.TarifaRepresentante.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.Viaje.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.ViajeRPT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.OrdenServicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LogisticaSOA\LogisticaERP.LogisticaSOA.ViajeActivoRPT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\LogisticaSOA\LogisticaService.disco" />
+    <None Include="Service References\LogisticaSOA\configuration91.svcinfo" />
+    <None Include="Service References\LogisticaSOA\configuration.svcinfo" />
+    <None Include="Service References\LogisticaSOA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\SeguridadERPSOA\LogisticaERP.SeguridadERPSOA.ResultadoBusquedaAvanzada.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SeguridadERPSOA\LogisticaERP.SeguridadERPSOA.Usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SeguridadERPSOA\LogisticaERP.SeguridadERPSOA.UsuarioSesion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService.wsdl" />
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GrupoPinsaSOA\GrupoPinsaService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService.wsdl" />
+    <None Include="Service References\LogisticaSOA\LogisticaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LogisticaSOA\LogisticaService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService.disco" />
+    <None Include="Service References\SeguridadERPSOA\configuration91.svcinfo" />
+    <None Include="Service References\SeguridadERPSOA\configuration.svcinfo" />
+    <None Include="Service References\SeguridadERPSOA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService.wsdl" />
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService1.wsdl" />
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadERPSOA\SeguridadModulosERPService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoRestringido.aspx.cs">
+      <DependentUpon>AccesoRestringido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccesoRestringido.aspx.designer.cs">
+      <DependentUpon>AccesoRestringido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.Master.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blank.Master.designer.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\BusquedaAvanzadaPersonalizada\BusquedaAvanzadaFolioPlaneacionReabastecimiento.aspx.cs">
+      <DependentUpon>BusquedaAvanzadaFolioPlaneacionReabastecimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\BusquedaAvanzadaPersonalizada\BusquedaAvanzadaFolioPlaneacionReabastecimiento.aspx.designer.cs">
+      <DependentUpon>BusquedaAvanzadaFolioPlaneacionReabastecimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\BusquedaViajes.aspx.cs">
+      <DependentUpon>BusquedaViajes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\BusquedaViajes.aspx.designer.cs">
+      <DependentUpon>BusquedaViajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CalculoTarifasPorteadores.aspx.cs">
+      <DependentUpon>CalculoTarifasPorteadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CalculoTarifasPorteadores.aspx.designer.cs">
+      <DependentUpon>CalculoTarifasPorteadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CalculoTarifasRepresentantes.aspx.cs">
+      <DependentUpon>CalculoTarifasRepresentantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CalculoTarifasRepresentantes.aspx.designer.cs">
+      <DependentUpon>CalculoTarifasRepresentantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CancelacionMasiva\CancelacionMasiva.aspx.cs">
+      <DependentUpon>CancelacionMasiva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CancelacionMasiva\CancelacionMasiva.aspx.designer.cs">
+      <DependentUpon>CancelacionMasiva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CancelacionMasiva\Popup\BusquedaCodigosMotivos.aspx.cs">
+      <DependentUpon>BusquedaCodigosMotivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CancelacionMasiva\Popup\BusquedaCodigosMotivos.aspx.designer.cs">
+      <DependentUpon>BusquedaCodigosMotivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\OracleCloud\popup\ObtenerFacturaPinsa.aspx.cs">
+      <DependentUpon>ObtenerFacturaPinsa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\OracleCloud\popup\ObtenerFacturaPinsa.aspx.designer.cs">
+      <DependentUpon>ObtenerFacturaPinsa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\OracleCloud\RecepcionarASN.aspx.cs">
+      <DependentUpon>RecepcionarASN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\OracleCloud\RecepcionarASN.aspx.designer.cs">
+      <DependentUpon>RecepcionarASN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\ActualizarTaraMontacarga.aspx.cs">
+      <DependentUpon>ActualizarTaraMontacarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\ActualizarTaraMontacarga.aspx.designer.cs">
+      <DependentUpon>ActualizarTaraMontacarga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\AntecamaraBasculaFrigorifico.aspx.cs">
+      <DependentUpon>AntecamaraBasculaFrigorifico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\AntecamaraBasculaFrigorifico.aspx.designer.cs">
+      <DependentUpon>AntecamaraBasculaFrigorifico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\AsignarUbicacionFinalTina.aspx.cs">
+      <DependentUpon>AsignarUbicacionFinalTina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\AsignarUbicacionFinalTina.aspx.designer.cs">
+      <DependentUpon>AsignarUbicacionFinalTina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs">
+      <DependentUpon>BarcoViaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViaje.aspx.designer.cs">
+      <DependentUpon>BarcoViaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViajeConsultar.aspx.cs">
+      <DependentUpon>BarcoViajeConsultar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViajeConsultar.aspx.designer.cs">
+      <DependentUpon>BarcoViajeConsultar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.cs">
+      <DependentUpon>BarcoViajeCrear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.designer.cs">
+      <DependentUpon>BarcoViajeCrear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.cs">
+      <DependentUpon>BarcoViajeEditar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BarcoViajeEditar.aspx.designer.cs">
+      <DependentUpon>BarcoViajeEditar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Bascula.aspx.cs">
+      <DependentUpon>Bascula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Bascula.aspx.designer.cs">
+      <DependentUpon>Bascula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BasculaMuelle.aspx.cs">
+      <DependentUpon>BasculaMuelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\BasculaMuelle.aspx.designer.cs">
+      <DependentUpon>BasculaMuelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Calidad.aspx.cs">
+      <DependentUpon>Calidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Calidad.aspx.designer.cs">
+      <DependentUpon>Calidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Certificacion.aspx.cs">
+      <DependentUpon>Certificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Certificacion.aspx.designer.cs">
+      <DependentUpon>Certificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\ConfigurarAlerta.aspx.cs">
+      <DependentUpon>ConfigurarAlerta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\ConfigurarAlerta.aspx.designer.cs">
+      <DependentUpon>ConfigurarAlerta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\DesviacionCalidad.aspx.cs">
+      <DependentUpon>DesviacionCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\DesviacionCalidad.aspx.designer.cs">
+      <DependentUpon>DesviacionCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\NivelMuestreo.aspx.cs">
+      <DependentUpon>NivelMuestreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\NivelMuestreo.aspx.designer.cs">
+      <DependentUpon>NivelMuestreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Zona.aspx.cs">
+      <DependentUpon>Zona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TrazabilidadTinas\Zona.aspx.designer.cs">
+      <DependentUpon>Zona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\MonitorLocalizadores.aspx.cs">
+      <DependentUpon>MonitorLocalizadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\MonitorLocalizadores.aspx.designer.cs">
+      <DependentUpon>MonitorLocalizadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\CalculoTarifas.aspx.cs">
+      <DependentUpon>CalculoTarifas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\CalculoTarifas.aspx.designer.cs">
+      <DependentUpon>CalculoTarifas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Tarifas.aspx.cs">
+      <DependentUpon>Tarifas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Tarifas.aspx.designer.cs">
+      <DependentUpon>Tarifas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\TarifasRepresentantes.aspx.cs">
+      <DependentUpon>TarifasRepresentantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\TarifasRepresentantes.aspx.designer.cs">
+      <DependentUpon>TarifasRepresentantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\PlaneacionReabastecimientoAlmacen.aspx.cs">
+      <DependentUpon>PlaneacionReabastecimientoAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\PlaneacionReabastecimientoAlmacen.aspx.designer.cs">
+      <DependentUpon>PlaneacionReabastecimientoAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Viajes.aspx.cs">
+      <DependentUpon>Viajes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Viajes.aspx.designer.cs">
+      <DependentUpon>Viajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Asn_Ejecutar_Concurrente.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\REST\INVInventoryOrganization.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\REST\POProcurementAgent.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\REST\POSupplier.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\REST\POSupplierSite.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\SOAP\AccountCombination.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\SOAP\PurchaseOrder.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\SOAP\ValidateAndCreateAccountReq.cs" />
+    <Compile Include="Clases\CFuncionesGenerales.cs" />
+    <Compile Include="Clases\ClaseBase.cs" />
+    <Compile Include="Clases\ClaseHttpCliente.cs" />
+    <Compile Include="Clases\ClaseHttpClienteOracleCloud.cs" />
+    <Compile Include="Clases\CLOUD_ORDEN_COMPRA.cs" />
+    <Compile Include="Clases\CLOUD_LISTA_VALORES.cs" />
+    <Compile Include="Clases\EBS12_CODIGOS_MOTIVOS.cs" />
+    <Compile Include="Clases\EBS12_PEDIDOS_VENTA.cs" />
+    <Compile Include="Clases\EBS12_TARIFAS_REPRESENTANTES.cs" />
+    <Compile Include="Clases\EBS12_VIAJES_PEDIDOS_VENTAS.cs" />
+    <Compile Include="Clases\Compressor.cs" />
+    <Compile Include="Clases\ControladorMensajes.cs" />
+    <Compile Include="Clases\EBS12_ALMACENES.cs" />
+    <Compile Include="Clases\Extensiones.cs" />
+    <Compile Include="Clases\GPO_EMPRESAS.cs" />
+    <Compile Include="Clases\GPO_EMPRESAS_INTEGRACIONES.cs" />
+    <Compile Include="Clases\GPO_ESTADOS.cs" />
+    <Compile Include="Clases\GPO_GRUPONEGOCIO_ERP.cs" />
+    <Compile Include="Clases\GPO_CIUDADES.cs" />
+    <Compile Include="Clases\GPO_MUNICIPIOS.cs" />
+    <Compile Include="Clases\EBS12_TRANSPORTISTAS.cs" />
+    <Compile Include="Clases\INVENTORY_ORGANIZATION_CLOUD.cs" />
+    <Compile Include="Clases\RecepcionarASN\LOGASN.cs" />
+    <Compile Include="Clases\RecepcionarASN\LOGASNDetalleDistribucion.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\LOGICalculoTarifaRepresentante.cs" />
+    <Compile Include="Clases\LOGI_CODIGOS_TRANSPORTES.cs" />
+    <Compile Include="Clases\Logi_Planeacion_Reabastecimiento_Almacen.cs" />
+    <Compile Include="Clases\LOGI_CALCULOS_TARIFAS.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleEBS12\OMSaleOrder.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Frigorifico.cs" />
+    <Compile Include="Clases\Viajes\LOGIViaje.cs" />
+    <Compile Include="Clases\LOGI_TARIFAS_REPRESENTANTES.cs" />
+    <Compile Include="Clases\LOGI_TARIFAS.cs" />
+    <Compile Include="Clases\LOG_MONITOR_LOCALIZADOR.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\DTO\Organization.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\DTO\PickSlipPICO.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\DTO\PickTransaction.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\DTO\PickTransactionResponse.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\DTO\ReportReq.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\SOAPBase.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\INVOrganization.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\INVPickSlipPICO.cs" />
+    <Compile Include="Clases\RecepcionarASN\OracleCloud\INVPickTransaction.cs" />
+    <Compile Include="Clases\Viajes\OracleEBS12\INVOrganizationUnit.cs" />
+    <Compile Include="Clases\Viajes\OracleEBS12\OMSaleOrder.cs" />
+    <Compile Include="Clases\Viajes\OracleEBS12\WSHCarrier.cs" />
+    <Compile Include="Clases\PaginaBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\SERP_USUARIOSESION.cs" />
+    <Compile Include="Clases\SessionHelper.cs" />
+    <Compile Include="Clases\CLOUD_TRANSFERENCIAS.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\SOAP\CreatePurchaseOrderReq.cs" />
+    <Compile Include="Clases\CalculoTarifaRepresentante\OracleCloud\SOAP\SOAPBase.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Alerta.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\AreaFrigorifico.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Barco.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Viaje.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\ViajeBarco.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Antecamara.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\AntecamaraBascula.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\AntecamaraFrigorifico.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Bascula.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\BasculaMuelle.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Calidad.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Muelle.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\NivelMuestreo.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Problema.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Producto.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\TanqueCertificacion.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\TaraMontacarga.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Zona.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Constantes.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\ManejadorLogsErrores.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\FolioIdentificador.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Talla.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Steamer.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Certificacion.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Tanque.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\ViajePesca.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\ViajeProducto.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\Tina.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\TipoEntrada.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\TransaccionPeso.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\UbicacionAreaFrigorifico.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\UbicacionExterna.cs" />
+    <Compile Include="Clases\TrazabilidadTinas\TarajeMontacargas.cs" />
+    <Compile Include="Controles\BusquedaGenerica\Busqueda.aspx.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\BusquedaGenerica\Busqueda.aspx.designer.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\BusquedaGenerica\Campo.cs" />
+    <Compile Include="Controles\BusquedaGenerica\ParametroGridView.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainPage.Master.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.Master.designer.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GrupoPinsaSOA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LogisticaSOA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SeguridadERPSOA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GrupoPinsaSOA\" />
+    <WCFMetadataStorage Include="Service References\LogisticaSOA\" />
+    <WCFMetadataStorage Include="Service References\SeguridadERPSOA\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50625</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51015/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

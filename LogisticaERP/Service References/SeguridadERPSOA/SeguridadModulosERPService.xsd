@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="SeguridadERPWCPApp.EntidadesContratos" elementFormDefault="qualified" targetNamespace="SeguridadERPWCPApp.EntidadesContratos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://winvmd01:82/SeguridadERP/Servicios/SeguridadModulosERPService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" />
+  <xs:simpleType name="eTipoModulo">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NINGUNO" />
+      <xs:enumeration value="FORMAS_WEB" />
+      <xs:enumeration value="DISPOSITIVOS_MOVILES" />
+      <xs:enumeration value="FORMAS_WINDOWS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eTipoModulo" nillable="true" type="tns:eTipoModulo" />
+  <xs:complexType name="UsuarioSesion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ModuloUltimoAcceso" nillable="true" type="tns:UsuarioAcceso" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioSesion" nillable="true" type="tns:UsuarioSesion" />
+  <xs:complexType name="UsuarioAcceso">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Fecha_acceso" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Fecha_acceso_string" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_modulo" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_tipo_modulo" type="xs:short" />
+          <xs:element minOccurs="0" name="Id_usuario" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_usuario_acceso" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioAcceso" nillable="true" type="tns:UsuarioAcceso" />
+  <xs:complexType name="EntidadBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Borrado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha_creador" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_modifico" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ultima_act" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Usuario_creador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario_modifico" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntidadBase" nillable="true" type="tns:EntidadBase" />
+  <xs:complexType name="Usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Apellido_materno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Apellido_paterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cambio_contrasena" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Clave_usuario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Credenciales" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Dias_contrasena" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Es_admin" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Fecha_contrasena" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id_empleado" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_empleado_string" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_rol" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_usuario" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ListaUsuarioEmpresa" nillable="true" type="tns:ArrayOfUsuarioEmpresa" />
+          <xs:element minOccurs="0" name="ListaUsuarioFuncionalidad" nillable="true" type="tns:ArrayOfUsuarioFuncionalidad" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" minOccurs="0" name="ListaUsuarioFuncionalidadControlJerarquico" nillable="true" type="q1:ArrayOfJerarquiaDeUsuarioFuncionalidadControl" />
+          <xs:element minOccurs="0" name="ListaUsuarioFuncionalidadControlPlano" nillable="true" type="tns:ArrayOfUsuarioFuncionalidadControl" />
+          <xs:element minOccurs="0" name="ListaUsuarioModulo" nillable="true" type="tns:ArrayOfUsuarioModulo" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SeguridadERPWCPApp.Utilerias.Extensiones" minOccurs="0" name="ListaUsuarioModuloFuncionalidadJerarquico" nillable="true" type="q2:ArrayOfJerarquiaDeUsuarioModuloFuncionalidad" />
+          <xs:element minOccurs="0" name="ListaUsuarioModuloFuncionalidadPlano" nillable="true" type="tns:ArrayOfUsuarioModuloFuncionalidad" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rol" nillable="true" type="tns:Rol" />
+          <xs:element minOccurs="0" name="UltimoAcceso" nillable="true" type="tns:UsuarioAcceso" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="ArrayOfUsuarioEmpresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioEmpresa" nillable="true" type="tns:UsuarioEmpresa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioEmpresa" nillable="true" type="tns:ArrayOfUsuarioEmpresa" />
+  <xs:complexType name="UsuarioEmpresa">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id_empresa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_usuario" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_usuario_empresa" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioEmpresa" nillable="true" type="tns:UsuarioEmpresa" />
+  <xs:complexType name="ArrayOfUsuarioFuncionalidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioFuncionalidad" nillable="true" type="tns:UsuarioFuncionalidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioFuncionalidad" nillable="true" type="tns:ArrayOfUsuarioFuncionalidad" />
+  <xs:complexType name="UsuarioFuncionalidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Es_autorizar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_borrar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_consultar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_guardar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_revisar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id_funcionalidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_modulo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Protocolo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Puerto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioFuncionalidad" nillable="true" type="tns:UsuarioFuncionalidad" />
+  <xs:complexType name="UsuarioFuncionalidadControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Es_deshabilitado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_sololectura" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_visible" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id_control_funcionalidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_funcionalidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_padre_control_funcionalidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Identificador_control_funcionalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre_control_funcionalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre_funcionalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_control_funcionalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uri" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioFuncionalidadControl" nillable="true" type="tns:UsuarioFuncionalidadControl" />
+  <xs:complexType name="ArrayOfUsuarioFuncionalidadControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioFuncionalidadControl" nillable="true" type="tns:UsuarioFuncionalidadControl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioFuncionalidadControl" nillable="true" type="tns:ArrayOfUsuarioFuncionalidadControl" />
+  <xs:complexType name="ArrayOfUsuarioModulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioModulo" nillable="true" type="tns:UsuarioModulo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioModulo" nillable="true" type="tns:ArrayOfUsuarioModulo" />
+  <xs:complexType name="UsuarioModulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Base_datos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_modulo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_tipo_modulo" type="xs:short" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Protocolo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Puerto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoModulo" nillable="true" type="tns:TipoModulo" />
+      <xs:element minOccurs="0" name="Uri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url_imagen" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioModulo" nillable="true" type="tns:UsuarioModulo" />
+  <xs:complexType name="TipoModulo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_tipo_modulo" type="xs:short" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TipoModulo" nillable="true" type="tns:TipoModulo" />
+  <xs:complexType name="UsuarioModuloFuncionalidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Es_autorizar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_borrar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_consultar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_grupo" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_guardar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Es_revisar" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id_funcionalidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_modulo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_modulo_funcionalidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_padre" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Protocolo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Puerto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uri" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioModuloFuncionalidad" nillable="true" type="tns:UsuarioModuloFuncionalidad" />
+  <xs:complexType name="ArrayOfUsuarioModuloFuncionalidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioModuloFuncionalidad" nillable="true" type="tns:UsuarioModuloFuncionalidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioModuloFuncionalidad" nillable="true" type="tns:ArrayOfUsuarioModuloFuncionalidad" />
+  <xs:complexType name="Rol">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_rol" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ListaRolPerfil" nillable="true" type="tns:ArrayOfRolPerfil" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Rol" nillable="true" type="tns:Rol" />
+  <xs:complexType name="ArrayOfRolPerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RolPerfil" nillable="true" type="tns:RolPerfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRolPerfil" nillable="true" type="tns:ArrayOfRolPerfil" />
+  <xs:complexType name="RolPerfil">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id_perfil" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_rol" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_rol_perfil" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RolPerfil" nillable="true" type="tns:RolPerfil" />
+  <xs:complexType name="ArrayOfUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Usuario" nillable="true" type="tns:Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuario" nillable="true" type="tns:ArrayOfUsuario" />
+</xs:schema>

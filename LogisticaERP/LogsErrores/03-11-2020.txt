@@ -1,0 +1,52 @@
+Fecha y Hora: 03/11/2020 09:50:03 a. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: ObtenerCatalogoBarco
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.ObtenerCatalogoBarco(String idBarco, String fechaInicio, String fechaFin) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 35
+
+Fecha y Hora: 03/11/2020 09:50:06 a. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: CargarDDLBarco
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.CargarDDLBarco() en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 72
+
+Fecha y Hora: 03/11/2020 09:52:03 a. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: ObtenerCatalogoBarco
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.ObtenerCatalogoBarco(String idBarco, String fechaInicio, String fechaFin) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 35
+
+Fecha y Hora: 03/11/2020 09:52:17 a. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: CargarDDLBarco
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViaje.CargarDDLBarco() en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViaje.aspx.cs:línea 72
+

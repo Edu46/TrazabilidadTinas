@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.AccesoDatosDAL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.AccesoDatosDAL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfGPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result" nillable="true" type="tns:GPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result" nillable="true" type="tns:ArrayOfGPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result" />
+  <xs:complexType name="GPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APPROVER_ID" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FECHA_CREADOR" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_MODIFICO" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_CONFIGURACION_CLOUD" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_EMPRESA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PREPARER_ID" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="USUARIO_CREADOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USUARIO_MODIFICO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result" nillable="true" type="tns:GPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result" />
+</xs:schema>

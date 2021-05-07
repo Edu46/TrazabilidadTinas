@@ -1,0 +1,45 @@
+Fecha y Hora: 19/11/2020 11:33:26 a. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: ObtenerViajePesca
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeCrear.ObtenerViajePesca(String idBarco) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.cs:línea 384
+
+Fecha y Hora: 19/11/2020 11:44:22 a. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: ObtenerViajePesca
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeCrear.ObtenerViajePesca(String idBarco) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.cs:línea 384
+
+Fecha y Hora: 19/11/2020 11:59:08 a. m.
+Excepción Interna
+Tipo: System.Net.Http.HttpRequestException
+Mensaje: El código de estado de la respuesta no indica un resultado correcto: 404 (Not Found).
+Origen: 
+Excepción
+Tipo: System.AggregateExceptionMensaje: Se han producido uno o varios errores.
+Origen: ObtenerViajePesca
+Rastreo de pila:    en System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   en System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   en System.Threading.Tasks.Task`1.get_Result()
+   en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeCrear.ObtenerViajePesca(String idBarco) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.cs:línea 384
+
+Fecha y Hora: 19/11/2020 05:33:00 p. m.
+Excepción
+Tipo: System.NullReferenceExceptionMensaje: Referencia a objeto no establecida como instancia de un objeto.
+Origen: ObtenerTanquesCertificaciones
+Rastreo de pila:    en LogisticaERP.Catalogos.TrazabilidadTinas.BarcoViajeCrear.ObtenerTanquesCertificaciones(String idViaje) en C:\TFS\LogisticaERP\LogisticaERP\LogisticaERP\Catalogos\TrazabilidadTinas\BarcoViajeCrear.aspx.cs:línea 216
+

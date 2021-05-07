@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="LogisticaWCFAPP.EntidadesContratos" elementFormDefault="qualified" targetNamespace="LogisticaWCFAPP.EntidadesContratos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfMonitorLocalizador">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MonitorLocalizador" nillable="true" type="tns:MonitorLocalizador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMonitorLocalizador" nillable="true" type="tns:ArrayOfMonitorLocalizador" />
+  <xs:complexType name="MonitorLocalizador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Espacios_disponibles" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Espacios_ocupados" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Existencia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Limite_tarimas" type="xs:int" />
+      <xs:element minOccurs="0" name="Localizador" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MonitorLocalizador" nillable="true" type="tns:MonitorLocalizador" />
+  <xs:complexType name="ArrayOfCodigoTransporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CodigoTransporte" nillable="true" type="tns:CodigoTransporte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCodigoTransporte" nillable="true" type="tns:ArrayOfCodigoTransporte" />
+  <xs:complexType name="CodigoTransporte">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo_transporte" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_codigo_transporte" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_empresa" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CodigoTransporte" nillable="true" type="tns:CodigoTransporte" />
+  <xs:complexType name="EntidadBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Borrado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha_creador" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_modifico" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_usuario" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario_creador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario_modifico" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntidadBase" nillable="true" type="tns:EntidadBase" />
+  <xs:complexType name="ArrayOfTarifa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tarifa" nillable="true" type="tns:Tarifa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTarifa" nillable="true" type="tns:ArrayOfTarifa" />
+  <xs:complexType name="Tarifa">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Backhaul" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Centro_costo_almacen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fecha_fin" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id_almacen_origen_ebs12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_ciudad" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_codigo_transporte" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_empresa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_estado" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_municipio" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_proveedor_ebs12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_tarifa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_tipo_tarifa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Monto_caseta" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Monto_tarifa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Nombre_almacen_ebs12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre_proveedor_ebs12" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Tarifa" nillable="true" type="tns:Tarifa" />
+  <xs:complexType name="ArrayOfCalculoTarifa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CalculoTarifa" nillable="true" type="tns:CalculoTarifa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCalculoTarifa" nillable="true" type="tns:ArrayOfCalculoTarifa" />
+  <xs:complexType name="CalculoTarifa">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Backhaul" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Caseta" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Folio_orden_compra" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_calculo_tarifa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_ciudad" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_codigo_transporte" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_estado" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_municipio" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_orden_compra" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_tarifa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_tipo_tarifa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Monto_caseta" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Monto_transporte" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Num_viaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pedido_venta" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Tranferencia" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CalculoTarifa" nillable="true" type="tns:CalculoTarifa" />
+  <xs:complexType name="CalculoTarifaRepresentante">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Almacen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CalculoTarifaRepresentanteDetalles" nillable="true" type="tns:ArrayOfCalculoTarifaRepresentanteDetalle" />
+          <xs:element minOccurs="0" name="FolioOrdenCompra" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDCalculoTarifaRepresentante" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDEmpresa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDOrdenCompra" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NumViaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalCajasEstandar" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalTransporte" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Transportista" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CalculoTarifaRepresentante" nillable="true" type="tns:CalculoTarifaRepresentante" />
+  <xs:complexType name="ArrayOfCalculoTarifaRepresentanteDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CalculoTarifaRepresentanteDetalle" nillable="true" type="tns:CalculoTarifaRepresentanteDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCalculoTarifaRepresentanteDetalle" nillable="true" type="tns:ArrayOfCalculoTarifaRepresentanteDetalle" />
+  <xs:complexType name="CalculoTarifaRepresentanteDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CajasEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CiudadEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoAlmacenEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoSubalmacenEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CostoCajaEBS12" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CostoTotalEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EstadoEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Excepcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactorConversionEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FechaProgramadaEBS12" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IDAlmacenEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDCalculoTarifaRepresentante" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDCalculoTarifaRerepsentanteDetalle" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDEntregaEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDTarifaRepresentante" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDViaje" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NumPedidoVentaEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumSucursalEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransportistaEBS12" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CalculoTarifaRepresentanteDetalle" nillable="true" type="tns:CalculoTarifaRepresentanteDetalle" />
+  <xs:complexType name="ArrayOfTarifaConfiguracion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TarifaConfiguracion" nillable="true" type="tns:TarifaConfiguracion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTarifaConfiguracion" nillable="true" type="tns:ArrayOfTarifaConfiguracion" />
+  <xs:complexType name="TarifaConfiguracion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clave_articulo_caseta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clave_articulo_tarifa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clave_cloud" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Combinacion_backhaul" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Combinacion_caseta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Combinacion_pedido_venta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Combinacion_transferencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cuenta_backhaul" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cuenta_caseta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cuenta_pedido_venta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cuenta_transferencia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_empresa_cloud" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_libro_cuenta_cloud" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre_libro_cuenta_cloud" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Udm" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TarifaConfiguracion" nillable="true" type="tns:TarifaConfiguracion" />
+  <xs:complexType name="ArrayOfTarifaRepresentante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TarifaRepresentante" nillable="true" type="tns:TarifaRepresentante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTarifaRepresentante" nillable="true" type="tns:ArrayOfTarifaRepresentante" />
+  <xs:complexType name="TarifaRepresentante">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id_almacen_origen_ebs12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_ciudad" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_empresa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_estado" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_municipio" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Id_tarifa_representante" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Kilometros" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Kilometros_min" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Monto_caja" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Monto_costo" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Municipio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre_almacen_ebs12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TarifaRepresentante" nillable="true" type="tns:TarifaRepresentante" />
+  <xs:complexType name="ArrayOfCPlaneacion_Reabastecimiento_Almacen_Navi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CPlaneacion_Reabastecimiento_Almacen_Navi" nillable="true" type="tns:CPlaneacion_Reabastecimiento_Almacen_Navi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCPlaneacion_Reabastecimiento_Almacen_Navi" nillable="true" type="tns:ArrayOfCPlaneacion_Reabastecimiento_Almacen_Navi" />
+  <xs:complexType name="CPlaneacion_Reabastecimiento_Almacen_Navi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="b_Registrado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="d_Envios" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Empresa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Planeacion_Reabastecimiento_Navi" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Inventario_Actual" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Inventario_Transito" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Mes_1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Mes_2" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Mes_3" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Real" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Saldo_Final" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Sugerido" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Ventas_Mes" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Ventas_Promedio" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="dt_Fecha_Solicitada" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_Dias_Inventario" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Lead_Time" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="s_A_Enviar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Codigo_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Descripcion_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Descripcion_Sku" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Inventario_Pinsa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Mensaje_Mostrar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Por_Surtir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Rec_Ships" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Sku" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Unidad_Medida" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CPlaneacion_Reabastecimiento_Almacen_Navi" nillable="true" type="tns:CPlaneacion_Reabastecimiento_Almacen_Navi" />
+  <xs:complexType name="ArrayOfC_Planeacion_Reabastecimiento_Almacen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="C_Planeacion_Reabastecimiento_Almacen" nillable="true" type="tns:C_Planeacion_Reabastecimiento_Almacen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfC_Planeacion_Reabastecimiento_Almacen" nillable="true" type="tns:ArrayOfC_Planeacion_Reabastecimiento_Almacen" />
+  <xs:complexType name="C_Planeacion_Reabastecimiento_Almacen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="d_Anio" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Dias_Inventario_Autorizado" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Folio_Planeacion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Empresa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Estatus_Planeacion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Planeacion_Reabastecimiento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Mes_1" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Mes_2" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Mes_3" type="xs:int" />
+      <xs:element minOccurs="0" name="dt_Fecha_Planeacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="s_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Descripcion_Estatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Descripcion_Planeacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Producto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="st_Planeacion_Reabastecimiento_Almacen_Detalle" nillable="true" type="tns:ArrayOfC_Planeacion_Reabastecimiento_Almacen_Detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="C_Planeacion_Reabastecimiento_Almacen" nillable="true" type="tns:C_Planeacion_Reabastecimiento_Almacen" />
+  <xs:complexType name="ArrayOfC_Planeacion_Reabastecimiento_Almacen_Detalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="C_Planeacion_Reabastecimiento_Almacen_Detalle" nillable="true" type="tns:C_Planeacion_Reabastecimiento_Almacen_Detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfC_Planeacion_Reabastecimiento_Almacen_Detalle" nillable="true" type="tns:ArrayOfC_Planeacion_Reabastecimiento_Almacen_Detalle" />
+  <xs:complexType name="C_Planeacion_Reabastecimiento_Almacen_Detalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="d_Envios" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Empresa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Planeacion_Reabastecimiento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Planeacion_Reabastecimiento_Detalle" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Id_Planeacion_Reabastecimiento_Navi" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Inventario_Actual" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Inventario_Transito" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Mes_1" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Mes_2" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Mes_3" type="xs:int" />
+      <xs:element minOccurs="0" name="d_Real" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Saldo_Final" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Sugerido" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Ventas_Diarias_Promedio" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Ventas_Mes" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Ventas_Promedio" type="xs:decimal" />
+      <xs:element minOccurs="0" name="i_Dias_Inventario" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Lead_Time" type="xs:int" />
+      <xs:element minOccurs="0" name="s_A_Enviar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Codigo_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Descripcion_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Descripcion_SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Inventario_Pinsa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Mensaje_Mostrar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Por_Surtir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Rec_Ships" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Unidad_Medida" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="C_Planeacion_Reabastecimiento_Almacen_Detalle" nillable="true" type="tns:C_Planeacion_Reabastecimiento_Almacen_Detalle" />
+  <xs:complexType name="ArrayOfC_Catalogo_Lead_Time">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="C_Catalogo_Lead_Time" nillable="true" type="tns:C_Catalogo_Lead_Time" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfC_Catalogo_Lead_Time" nillable="true" type="tns:ArrayOfC_Catalogo_Lead_Time" />
+  <xs:complexType name="C_Catalogo_Lead_Time">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="d_Id_Catalogo_Lead_Time_Almacen" type="xs:decimal" />
+      <xs:element minOccurs="0" name="d_Lead_Time" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Codigo_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Nombre_Almacen" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="C_Catalogo_Lead_Time" nillable="true" type="tns:C_Catalogo_Lead_Time" />
+  <xs:complexType name="ArrayOfOrdenServicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdenServicio" nillable="true" type="tns:OrdenServicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdenServicio" nillable="true" type="tns:ArrayOfOrdenServicio" />
+  <xs:complexType name="OrdenServicio">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AUTOPISTAS" type="xs:decimal" />
+          <xs:element minOccurs="0" name="BACKHAUL" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FECHA_CREACION_VIAJE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FLETE" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FOLIO_ORDEN_COMPRA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IVA" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NOMBRE_ALMACEN_EBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMBRE_PROVEEDOR_EBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RETENCION" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SUBTOTAL" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TOTAL" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TOTAL_LETRAS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VIAJE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrdenServicio" nillable="true" type="tns:OrdenServicio" />
+  <xs:complexType name="ArrayOfViaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Viaje" nillable="true" type="tns:Viaje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViaje" nillable="true" type="tns:ArrayOfViaje" />
+  <xs:complexType name="Viaje">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Caseta" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Chofer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoTransporte" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Entregas" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaEnvio" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Flete" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FolioViaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Folio_OC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDAlmacenOracle" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDEmpresa" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDEntregaEbs12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDEstado" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDProveedorOracle" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDViaje" type="xs:decimal" />
+          <xs:element minOccurs="0" name="InformacionCompleta" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Municipio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NoViaje" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NombreAlmacenOracle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroCartaPorte" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroConvoy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroECOCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroRuta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroSello" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroSerieCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlacaCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlacaTractor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProveedorOracle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoAlmacenOracle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoViaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TodoRegistrado" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ViajeEntregas" nillable="true" type="tns:ArrayOfViajeEntrega" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Viaje" nillable="true" type="tns:Viaje" />
+  <xs:complexType name="ArrayOfViajeEntrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViajeEntrega" nillable="true" type="tns:ViajeEntrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViajeEntrega" nillable="true" type="tns:ArrayOfViajeEntrega" />
+  <xs:complexType name="ViajeEntrega">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntidadBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CajasEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CiudadEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoAlmacenEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoSubalmacenEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstadoEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FactorConversionEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FechaProgramadaEBS12" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IDAlmacenEBS12" type="xs:long" />
+          <xs:element minOccurs="0" name="IDEntregaEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDViaje" type="xs:decimal" />
+          <xs:element minOccurs="0" name="IDViajeEntrega" type="xs:decimal" />
+          <xs:element minOccurs="0" name="NumPedidoVentaEBS12" type="xs:long" />
+          <xs:element minOccurs="0" name="NumSucursalEBS12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalCajasEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TotalCajasEstandarEBS12" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TransportistaEBS12" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ViajeEntrega" nillable="true" type="tns:ViajeEntrega" />
+  <xs:complexType name="ArrayOfViajeRPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViajeRPT" nillable="true" type="tns:ViajeRPT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViajeRPT" nillable="true" type="tns:ArrayOfViajeRPT" />
+  <xs:complexType name="ViajeRPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivoViaje" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BorradoEntrega" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BorradoViaje" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Chofer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCreadorEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaCreadorViaje" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaEnvio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificoEntrega" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificoViaje" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FolioViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDAlmacenOracle" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDEmpresa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDEntregaEBS12" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDProveedorOracle" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDViaje" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDViajeEntrega" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InformacionCompleta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoViaje" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NombreAlmacenOracle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroCartaPorte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroConvoy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroECONCaja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroRuta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroSello" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroSerieCaja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlacaCaja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProveedorOracle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TodoRegistrado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UsuarioCreadorEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioCreadorViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioModificoEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioModificoViaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViajeRPT" nillable="true" type="tns:ViajeRPT" />
+  <xs:complexType name="ArrayOfViajeActivoRPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViajeActivoRPT" nillable="true" type="tns:ViajeActivoRPT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViajeActivoRPT" nillable="true" type="tns:ArrayOfViajeActivoRPT" />
+  <xs:complexType name="ViajeActivoRPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivoViaje" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BorradoViaje" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Chofer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCreadorViaje" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaEnvio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificoViaje" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FolioViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDAlmacenOracle" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDEmpresa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDProveedorOracle" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IDViaje" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InformacionCompleta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoViaje" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NombreAlmacenOracle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroCartaPorte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroConvoy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroECONCaja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroRuta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroSello" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroSerieCaja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlacaCaja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProveedorOracle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TodoRegistrado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UsuarioCreadorViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioModificoViaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ViajeEntregas" nillable="true" type="tns:ArrayOfViajeEntrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViajeActivoRPT" nillable="true" type="tns:ViajeActivoRPT" />
+</xs:schema>

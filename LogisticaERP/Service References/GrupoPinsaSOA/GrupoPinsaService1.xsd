@@ -1,0 +1,2110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd2" namespace="GrupoPinsaWCFAPP.EntidadesContratos" />
+  <xs:import schemaLocation="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd5" namespace="GrupoPinsaWCFAPP.UtileriasContratos" />
+  <xs:import schemaLocation="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" />
+  <xs:import schemaLocation="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://winvmd01:82/GrupoPinsa/Servicios/GrupoPinsaService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.AccesoDatosDAL" />
+  <xs:element name="GuardarContribuyentesListaNegraSAT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="listaContribuyentes" nillable="true" type="q1:ArrayOfContribuyentesSAT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarContribuyentesListaNegraSATResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarContribuyentesListaNegraSATResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLogContribuyentes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="params" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLogContribuyentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerLogContribuyentesResult" nillable="true" type="q2:ArrayOfLogContribuyenteListaNegra" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAduana">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_aduana" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAduanaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerAduanaResult" nillable="true" type="q3:ArrayOfAduana" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarAduana">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="aduana" nillable="true" type="q4:Aduana" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarAduanaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarAduanaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Enum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="enumeraciones" nillable="true" type="q5:Enumerador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnumResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaAvanzada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="GrupoPinsaWCFAPP.UtileriasContratos" minOccurs="0" name="busqueda" nillable="true" type="q6:BusquedaAvanzada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaAvanzadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="GrupoPinsaWCFAPP.UtileriasContratos" minOccurs="0" name="BusquedaAvanzadaResult" nillable="true" type="q7:ResultadoBusquedaAvanzada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCodigoPostal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_codigo_postal" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_pais" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="pais" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_estado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_municipio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="municipio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_ciudad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ciudad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigo_postal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="borrado" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCodigoPostalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneCodigoPostalResult" nillable="true" type="q8:ArrayOfCodigoPostal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCodigoPostal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="codigoPostal" nillable="true" type="q9:CodigoPostal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCodigoPostalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarCodigoPostalResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDepartamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDepartamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneDepartamentoResult" nillable="true" type="q10:ArrayOfDepartamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDepartamentosPorGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="clave_depto" nillable="true" type="q11:ArrayOfNullableOfint" />
+        <xs:element minOccurs="0" name="nom_depto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDepartamentosPorGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerDepartamentosPorGrupoNegocioResult" nillable="true" type="q12:ArrayOfDepartamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDepartamentosPuestosPorGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_depto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_depto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDepartamentosPuestosPorGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerDepartamentosPuestosPorGrupoNegocioResult" nillable="true" type="q13:ArrayOfDepartamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDepartamentosPorAreaGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_area" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_area" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDepartamentosPorAreaGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerDepartamentosPorAreaGrupoNegocioResult" nillable="true" type="q14:ArrayOfDepartamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDepartamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="departamento" nillable="true" type="q15:Departamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDepartamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarDepartamentoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDepartamentoAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_departamento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDepartamentoAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneDepartamentoAutocompleteResult" nillable="true" type="q16:ArrayOfDepartamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDepartamentoPorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clave_usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDepartamentoPorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneDepartamentoPorUsuarioResult" nillable="true" type="q17:ArrayOfDepartamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre_documento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneDocumentoResult" nillable="true" type="q18:ArrayOfDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_departamento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_empleado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clave_departamento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clave_puesto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellido_paterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellido_materno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneEmpleadoResult" nillable="true" type="q19:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEmpleadoPuesto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEmpleadoPuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneEmpleadoPuestoResult" nillable="true" type="q20:ArrayOfEmpleadoPuesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorClave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cla_trab" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorClaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioPorClaveResult" nillable="true" type="q21:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorRFC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorRFCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioPorRFCResult" nillable="true" type="q22:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorCURP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorCURPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioPorCURPResult" nillable="true" type="q23:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorDepto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_depto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_depto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_paterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_materno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom_trab" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorDeptoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioPorDeptoResult" nillable="true" type="q24:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorPuesto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_puesto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_puesto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_paterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_materno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom_trab" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorPuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioPorPuestoResult" nillable="true" type="q25:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_area" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_area" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_paterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_materno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom_trab" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioPorAreaResult" nillable="true" type="q26:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ap_paterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_materno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom_trab" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioPorNombreResult" nillable="true" type="q27:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cla_trab" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="ap_paterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ap_materno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nom_trab" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clave_depto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_depto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clave_puesto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_puesto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clave_area" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_area" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosActivosGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadosActivosGrupoNegocioResult" nillable="true" type="q28:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadoActivoGrupoNegocioSueldoPorClave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cla_trab" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadoActivoGrupoNegocioSueldoPorClaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadoActivoGrupoNegocioSueldoPorClaveResult" nillable="true" type="q29:Empleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadoActivoGrupoNegocioPorPeriodoNominaFortia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="id_periodo_nomina_fortia" nillable="true" type="q30:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadoActivoGrupoNegocioPorPeriodoNominaFortiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpleadoActivoGrupoNegocioPorPeriodoNominaFortiaResult" nillable="true" type="q31:ArrayOfEmpleado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="razon_social" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre_comercial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="representante_legal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="control_presupuestal" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpresaResult" nillable="true" type="q32:ArrayOfEmpresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="empresa" nillable="true" type="q33:Empresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarEmpresaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasIntegraciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresaIntegracion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idEmpresaSIP" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idEmpresaEBS" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idEmpresaEBS12" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idEmpresaCloud" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="claveCloud" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveEBS" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasIntegracionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpresasIntegracionesResult" nillable="true" type="q34:ArrayOfEmpresaIntegracion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasDespliegues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresaSIP" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tipo_despliegue" nillable="true" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasDesplieguesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerEmpresasDesplieguesResult" nillable="true" type="q35:ArrayOfEmpresaDespliegue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEventoContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_evento_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_tipo_movimiento_almacen" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEventoContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneEventoContableResult" nillable="true" type="q36:ArrayOfEventoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEventoContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="eventocontable" nillable="true" type="q37:EventoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEventoContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarEventoContableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEventoContableAsiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_evento_contable_asiento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_evento_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_titulo_cuenta_cargo" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_titulo_cuenta_abono" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEventoContableAsientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneEventoContableAsientoResult" nillable="true" type="q38:ArrayOfEventoContableAsiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEventoContableAsiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="eventocontableasiento" nillable="true" type="q39:EventoContableAsiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEventoContableAsientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarEventoContableAsientoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarCorreo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="mensaje" nillable="true" type="q40:ArrayOfEnvioCorreo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarCorreoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="EnviarCorreoResult" nillable="true" type="q41:ArrayOfEnvioCorreo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SmtpEnviarCorreo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="smtpCorreo" nillable="true" type="q42:SmtpCorreo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SmtpEnviarCorreoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="SmtpEnviarCorreoResult" nillable="true" type="q43:ArrayOfSmtpMensaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoCambio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="from_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="to_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoCambioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTipoCambioResult" nillable="true" type="q44:ArrayOfTipoCambio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoCambioUltimo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="from_currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="to_currency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoCambioUltimoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTipoCambioUltimoResult" nillable="true" type="q45:TipoCambio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCatalogoConfiguracionRutaServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoServicio" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCatalogoConfiguracionRutaServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneCatalogoConfiguracionRutaServicioResult" nillable="true" type="q46:ArrayOfCatalogoConfiguracionRutaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneConfiguracionesOracleCloud">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_Empresa" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneConfiguracionesOracleCloudResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/GrupoPinsaWCFAPP.AccesoDatosDAL" minOccurs="0" name="ObtieneConfiguracionesOracleCloudResult" nillable="true" type="q47:ArrayOfGPO_CONFIGURACIONES_ORACLE_CLOUD_CONSULTAR_SP_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCategoriaCompra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_categoria_compra" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCategoriaCompraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCategoriaCompraResult" nillable="true" type="q48:ArrayOfCategoriaCompra" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_combinacion_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="libro_contable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCombinacionContableResult" nillable="true" type="q49:ArrayOfCombinacionContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContableValidarCuentaContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_combinacion_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_oracle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cuenta_contable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="borrado" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContableValidarCuentaContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCombinacionContableValidarCuentaContableResult" nillable="true" type="q50:ArrayOfCombinacionContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContableCuentaContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_combinacion_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cuenta_contable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="es_cuenta_contable_exacta" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContableCuentaContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCombinacionContableCuentaContableResult" nillable="true" type="q51:ArrayOfCombinacionContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContableValidarParaAsignar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cuenta_contable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_tipo_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tipo_documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="importe_concepto" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_proyecto_tarea_erogacion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="borrado" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCombinacionContableValidarParaAsignarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerCombinacionContableValidarParaAsignarResult" nillable="true" type="q52:CombinacionContableValidarParaAsignar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSegmentoCuentaContables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre_segmento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSegmentoCuentaContablesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerSegmentoCuentaContablesResult" nillable="true" type="q53:ArrayOfCombinacionContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSegmentoCombinacionContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre_segmento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSegmentoCombinacionContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerSegmentoCombinacionContableResult" nillable="true" type="q54:ArrayOfSegmentoCombinacionContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaCombinacionContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="segmento_empresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cuenta_contable" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaCombinacionContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ValidaCombinacionContableResult" nillable="true" type="q55:CombinacionContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportarCombinacionContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_combinacion_contable_registro_actualizacion" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportarCombinacionContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImportarCombinacionContableResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSegmentoCuentasContablesFiltrarSubsegmentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="segmento_cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento8" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSegmentoCuentasContablesFiltrarSubsegmentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerSegmentoCuentasContablesFiltrarSubsegmentosResult" nillable="true" type="q56:SegmentoCuentaContableFiltrado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OracleValidaCombinacionCuentaContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="combinacion_contable" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OracleValidaCombinacionCuentaContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OracleValidaCombinacionCuentaContableResult" nillable="true" type="q57:ArrayOfKeyValueOfintstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OracleValidaCombinacionCuentaContableLista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lista_combinacion_contable" nillable="true" type="q58:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OracleValidaCombinacionCuentaContableListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OracleValidaCombinacionCuentaContableListaResult" nillable="true" type="q59:ArrayOfKeyValueOfstringint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneGastoAsociado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_gasto_asociado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="gasto_asociado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneGastoAsociadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneGastoAsociadoResult" nillable="true" type="q60:ArrayOfGastoAsociado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGastoAsociado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="gastoAsociado" nillable="true" type="q61:GastoAsociado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGastoAsociadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarGastoAsociadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneJuegoLibro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_juego_libro" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmento02" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="juego_libro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_moneda_funcional" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion_moneda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneJuegoLibroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneJuegoLibroResult" nillable="true" type="q62:ArrayOfJuegoLibro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePais">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_pais" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePaisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtienePaisResult" nillable="true" type="q63:ArrayOfPais" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPais">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="pais" nillable="true" type="q64:Pais" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPaisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarPaisResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuesto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tasa_impuesto" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_oracle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa_oracle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tasa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTasaImpuestoResult" nillable="true" type="q65:ArrayOfTasaImpuesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuesto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="tasaImpuesto" nillable="true" type="q66:TasaImpuesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTasaImpuestoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarListaTasaImpuesto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="listaTasaImpuesto" nillable="true" type="q67:ArrayOfTasaImpuesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarListaTasaImpuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarListaTasaImpuestoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuestoCombinacionContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tasa_impuesto_combinacion_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_tasa_impuesto" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_combinacion_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuestoCombinacionContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTasaImpuestoCombinacionContableResult" nillable="true" type="q68:ArrayOfTasaImpuestoCombinacionContable_x0020_" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuestoCombinacionContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="tasaImpuestoCombinacionContable" nillable="true" type="q69:TasaImpuestoCombinacionContable_x0020_" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuestoCombinacionContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTasaImpuestoCombinacionContableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tipo_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tipo_documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTipoDocumentoResult" nillable="true" type="q70:ArrayOfTipoDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoDocumentoTipoErogacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_tipo_documento_tipo_erogacion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_tipo_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo_documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_grupo_negocio_erp" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoDocumentoTipoErogacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTipoDocumentoTipoErogacionResult" nillable="true" type="q71:ArrayOfTipoDocumentoTipoErogacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTipoDocumentoTipoErogacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="tipodocumentotipoerogacion" nillable="true" type="q72:TipoDocumentoTipoErogacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTipoDocumentoTipoErogacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTipoDocumentoTipoErogacionResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoDocumentoTipoErogacionBusqueda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_tipo_documento_tipo_erogacion_detalle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_tipo_documento_tipo_erogacion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_tipo_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_tipo_erogacion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="automatico" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="automatico_erogacion" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Default" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoDocumentoTipoErogacionBusquedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTipoDocumentoTipoErogacionBusquedaResult" nillable="true" type="q73:ArrayOfTipoDocumentoTipoErogacionBusqueda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoDocumentoTipoErogacionProyectoTarea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_tipo_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_tipo_documento_tipo_erogacion_detalle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_proyecto" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_proyecto_tarea" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_tipo_erogacion" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTipoDocumentoTipoErogacionProyectoTareaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerTipoDocumentoTipoErogacionProyectoTareaResult" nillable="true" type="q74:ArrayOfTipoDocumentoTipoErogacionProyectoTarea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_estado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_pais" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneEstadoResult" nillable="true" type="q75:ArrayOfEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="estado" nillable="true" type="q76:Estado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarEstadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMunicipio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_municipio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_estado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMunicipioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerMunicipioResult" nillable="true" type="q77:ArrayOfMunicipio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMunicipio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="municipio" nillable="true" type="q78:Municipio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMunicipioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarMunicipioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCiudad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_ciudad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_municipio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCiudadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneCiudadResult" nillable="true" type="q79:ArrayOfCiudad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCiudadPorEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_estado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCiudadPorEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneCiudadPorEstadoResult" nillable="true" type="q80:ArrayOfCiudad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCiudad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ciudad" nillable="true" type="q81:Ciudad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCiudadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarCiudadResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneNotificacionPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_notificacion_pago" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneNotificacionPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneNotificacionPagoResult" nillable="true" type="q82:ArrayOfNotificacionPago" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarNotificacionPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="notificacionpago" nillable="true" type="q83:NotificacionPago" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarNotificacionPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarNotificacionPagoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMetodoPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_metodo_pago" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_virtual" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMetodoPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneMetodoPagoResult" nillable="true" type="q84:ArrayOfMetodoPago" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMetodoPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="metodopago" nillable="true" type="q85:MetodoPago" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMetodoPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarMetodoPagoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneFechaInicioDiaCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_fecha_inicio_credito" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="campo_descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneFechaInicioDiaCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneFechaInicioDiaCreditoResult" nillable="true" type="q86:ArrayOfFechaInicioDiaCredito" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarFechaInicioDiaCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="fechainiciodiacredito" nillable="true" type="q87:FechaInicioDiaCredito" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarFechaInicioDiaCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarFechaInicioDiaCreditoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePlantillaCorreo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_plantilla" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo_plantilla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="texto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePlantillaCorreoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtienePlantillaCorreoResult" nillable="true" type="q88:ArrayOfPlantillaCorreo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPlantillaCorreo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="plantillacorreo" nillable="true" type="q89:PlantillaCorreo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPlantillaCorreoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarPlantillaCorreoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneAgenteAduanal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_agente_aduanal" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneAgenteAduanalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneAgenteAduanalResult" nillable="true" type="q90:ArrayOfAgenteAduanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarAgenteAduanal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="agenteaduanal" nillable="true" type="q91:AgenteAduanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarAgenteAduanalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarAgenteAduanalResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneGrupoRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_grupo_retencion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneGrupoRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneGrupoRetencionResult" nillable="true" type="q92:ArrayOfGrupoRetencion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGrupoRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="gruporetencion" nillable="true" type="q93:GrupoRetencion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGrupoRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarGrupoRetencionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneGrupoRetencionDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_grupo_retencion_detalle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_grupo_retencion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_tasa_impuesto_retencion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneGrupoRetencionDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneGrupoRetencionDetalleResult" nillable="true" type="q94:ArrayOfGrupoRetencionDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGrupoRetencionDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="gruporetenciondetalle" nillable="true" type="q95:GrupoRetencionDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGrupoRetencionDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarGrupoRetencionDetalleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuestoRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tasa_impuesto_retencion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tasa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuestoRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTasaImpuestoRetencionResult" nillable="true" type="q96:ArrayOfTasaImpuestoRetencion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuestoRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="tasaimpuestoretencion" nillable="true" type="q97:TasaImpuestoRetencion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuestoRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTasaImpuestoRetencionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuestoRetencionEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tasa_impuesto_retencion_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_tasa_impuesto_retencion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_tasa_impuesto" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTasaImpuestoRetencionEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTasaImpuestoRetencionEmpresaResult" nillable="true" type="q98:ArrayOfTasaImpuestoRetencionEmpresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuestoRetencionEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="tasaimpuestoretencionempresa" nillable="true" type="q99:TasaImpuestoRetencionEmpresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTasaImpuestoRetencionEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTasaImpuestoRetencionEmpresaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePeriodoAnual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_periodo_anual" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="periodo_anual" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePeriodoAnualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtienePeriodoAnualResult" nillable="true" type="q100:ArrayOfPeriodoAnual" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPeriodoAnual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="periodoanual" nillable="true" type="q101:PeriodoAnual" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPeriodoAnualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarPeriodoAnualResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneModulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_modulo" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="modulo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneModuloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneModuloResult" nillable="true" type="q102:ArrayOfModulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneModuloResponsabilidadOracle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_modulo_responsabilidad_oracle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_modulo" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_responsabilidad_oracle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_aplicacion_oracle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_usuario_oracle" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneModuloResponsabilidadOracleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneModuloResponsabilidadOracleResult" nillable="true" type="q103:ArrayOfModuloResponsabilidadOracle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEstadoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_estado_documento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="estado_documento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneEstadoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneEstadoDocumentoResult" nillable="true" type="q104:ArrayOfEstadoDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTallerInterno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_taller_interno" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="taller" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTallerInternoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTallerInternoResult" nillable="true" type="q105:ArrayOfTallerInterno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTituloCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_titulo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTituloCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTituloCuentaResult" nillable="true" type="q106:ArrayOfTituloCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTituloCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="titulocuenta" nillable="true" type="q107:TituloCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTituloCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTituloCuentaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePuesto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_puesto" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="puesto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id_taller_interno" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtienePuestoResult" nillable="true" type="q108:ArrayOfPuesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPuestosPorDeptoGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_depto" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_depto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPuestosPorDeptoGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerPuestosPorDeptoGrupoNegocioResult" nillable="true" type="q109:ArrayOfPuesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPuestosPorGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_puesto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_puesto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPuestosPorGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerPuestosPorGrupoNegocioResult" nillable="true" type="q110:ArrayOfPuesto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAreasGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave_area" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="nom_area" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAreasGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerAreasGrupoNegocioResult" nillable="true" type="q111:ArrayOfAreaRH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAreasDepartamentosGrupoNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio" type="xs:decimal" />
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="clave_area" nillable="true" type="q112:ArrayOfNullableOfint" />
+        <xs:element minOccurs="0" name="nom_area" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAreasDepartamentosGrupoNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerAreasDepartamentosGrupoNegocioResult" nillable="true" type="q113:ArrayOfAreaRH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneNombrePrioridad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_nombre_prioridad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneNombrePrioridadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneNombrePrioridadResult" nillable="true" type="q114:ArrayOfNombrePrioridad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarNombrePrioridad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="nombreprioridad" nillable="true" type="q115:NombrePrioridad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarNombrePrioridadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarNombrePrioridadResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePrioridadTituloCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_prioridad_titulo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_titulo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre_titulo_cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePrioridadTituloCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtienePrioridadTituloCuentaResult" nillable="true" type="q116:ArrayOfPrioridadTituloCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPrioridadTituloCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="prioridadtitulocuenta" nillable="true" type="q117:PrioridadTituloCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPrioridadTituloCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarPrioridadTituloCuentaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePrioridadTitutloCuentaDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_prioridad_titulo_cuenta_detalle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_prioridad_titulo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_nombre_prioridad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtienePrioridadTitutloCuentaDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtienePrioridadTitutloCuentaDetalleResult" nillable="true" type="q118:ArrayOfPrioridadTitutloCuentaDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPrioridadTitutloCuentaDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="prioridadtitutlocuentadetalle" nillable="true" type="q119:PrioridadTitutloCuentaDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPrioridadTitutloCuentaDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarPrioridadTitutloCuentaDetalleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoBD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_mapeo_bd" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre_bd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoBDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneMapeoBDResult" nillable="true" type="q120:ArrayOfMapeoBD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMapeoBD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="mapeobd" nillable="true" type="q121:MapeoBD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMapeoBDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarMapeoBDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_mapeo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_prioridad_titulo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_titulo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_combinacion_contable" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneMapeoCuentaResult" nillable="true" type="q122:ArrayOfMapeoCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMapeoCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="mapeocuenta" nillable="true" type="q123:MapeoCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMapeoCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarMapeoCuentaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoCuentaDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_mapeo_cuenta_detalle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_mapeo_cuenta" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_prioridad_titulo_cuenta_detalle" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoCuentaDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneMapeoCuentaDetalleResult" nillable="true" type="q124:ArrayOfMapeoCuentaDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMapeoCuentaDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="mapeocuentadetalle" nillable="true" type="q125:MapeoCuentaDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMapeoCuentaDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarMapeoCuentaDetalleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoColumna">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoColumnaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneMapeoColumnaResult" nillable="true" type="q126:ArrayOfMapeoColumna" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoTabla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nomenclatura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneMapeoTablaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneMapeoTablaResult" nillable="true" type="q127:ArrayOfMapeoTabla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneConsultaAvanzada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="campo_consultar" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nomenclatura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="campos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneConsultaAvanzadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneConsultaAvanzadaResult" nillable="true" type="q128:ArrayOfConsultaAvanzada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrabarGLInterface">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="glInterface" nillable="true" type="q129:GLInterface" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GrabarGLInterfaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GrabarGLInterfaceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoGastoAsociado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_tipo_gasto_asociado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_gasto_asociado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneTipoGastoAsociadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneTipoGastoAsociadoResult" nillable="true" type="q130:ArrayOfTipoGastoAsociado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTipoGastoAsociado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="tipoGastoAsociado" nillable="true" type="q131:TipoGastoAsociado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTipoGastoAsociadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarTipoGastoAsociadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCombinacionContableRegistroActualizacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_combinacion_contable_registro_actualizacion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Id_empresa" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fecha_proceso_inicia" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecha_proceso_finaliza" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="procesando" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneCombinacionContableRegistroActualizacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtieneCombinacionContableRegistroActualizacionResult" nillable="true" type="q132:ArrayOfCombinacionContableRegistroActualizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCombinacionContableRegistroActualizacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="combinacionContableRegistroActualizacion" nillable="true" type="q133:CombinacionContableRegistroActualizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCombinacionContableRegistroActualizacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarCombinacionContableRegistroActualizacionResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerGruposNegocioERP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_grupo_negocio_erp" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerGruposNegocioERPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerGruposNegocioERPResult" nillable="true" type="q134:ArrayOfGrupoNegocioERP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSubtipoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_tipo_documento" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSubtipoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerSubtipoDocumentoResult" nillable="true" type="q135:ArrayOfSubtipoDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerContribuyentesListaNegraSAT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="params" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerContribuyentesListaNegraSATResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="GrupoPinsaWCFAPP.EntidadesContratos" minOccurs="0" name="ObtenerContribuyentesListaNegraSATResult" nillable="true" type="q136:ArrayOfContribuyentesSAT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

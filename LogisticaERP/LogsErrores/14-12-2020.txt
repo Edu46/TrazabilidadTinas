@@ -1,0 +1,42 @@
+Fecha y Hora: 14/12/2020 06:01:58 p. m.
+Error en el elemento: IBM Integration Bus
+Origen: EditarProducto
+Mensaje: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>404 Not Found</title>
+</head>
+<body>
+<h1>404 Not Found</h1>
+<p>
+BIP6311E: REST API '&apos;API_TRAZABILIDAD_TINAS&apos;' does not support method '&apos;PUT&apos;' for URL '&apos;http://10.50.1.15:7080/api_trazabilidad_tinas/v1//relaciones/viajes-productos&apos;'. 
+</p>
+<hr>
+<i>
+IBM Integration Bus v10.0.0.12
+</i>
+</body>
+</html>
+
+
+Fecha y Hora: 14/12/2020 06:06:20 p. m.
+Error en el elemento: IBM Integration Bus
+Origen: EditarProducto
+Mensaje: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>404 Not Found</title>
+</head>
+<body>
+<h1>404 Not Found</h1>
+<p>
+BIP6311E: REST API '&apos;API_TRAZABILIDAD_TINAS&apos;' does not support method '&apos;PUT&apos;' for URL '&apos;http://10.50.1.15:7080/api_trazabilidad_tinas/v1//relaciones/viajes-productos&apos;'. 
+</p>
+<hr>
+<i>
+IBM Integration Bus v10.0.0.12
+</i>
+</body>
+</html>
+
+
